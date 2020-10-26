@@ -10,3 +10,5 @@ A collection of randoms things that don't have a better place to go.
 - Resource Roomba. Really broad concept, so might actually be multiple tools. Cleanup "dirt" from kubernetes
   - Delete the kind of thing found by the kube linter
   - Delete resources for an environment that isn't associated with a branch in GitLab
+- GitLab CI files in a non-shit language. Anything is better than YAML. Might rely heavily on scripts.
+- Various graphics toys e.g. filigree, word art, other weird shit that looks cool.
