@@ -1,6 +1,6 @@
-# Junk Drawer
+# Main
 
-A collection of randoms things that don't have a better place to go.
+Where I keep most of my stuff.
 
 ## Ideas for projects
 

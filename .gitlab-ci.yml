@@ -1,8 +1,11 @@
-
-include:
-  - template: 'Workflows/MergeRequest-Pipelines.gitlab-ci.yml'
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+    - if: '$CI_COMMIT_TAG'
 
 stages:
+- helm
 - diagnostics
 
 256-colors:
@@ -10,8 +13,58 @@ stages:
   image: ubuntu:20.04
   script: scripts/256-colors.sh
 
-
 colors_and_formatting:
   stage: diagnostics
   image: ubuntu:20.04
   script: scripts/colors_and_formatting.sh
+
+.helm_template:
+  image:
+    name: alpine/helm:3.3.4
+    entrypoint: ['']
+  stage: helm
+  variables:
+    REPO: stable
+    CHART: '?'
+    CHART_VERSION: '?'
+    VALUES_FILE: '?'
+  before_script:
+    - echo -e "Working in \e[33m${PWD}\e[0m."
+
+    - chmod go-r $KUBECONFIG
+
+    - helm repo add stable https://kubernetes-charts.storage.googleapis.com
+
+    - helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+    - helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+    - helm repo update
+
+    - RELEASE="${RELEASE:-$CHART}"
+
+    - echo -e "Using variables:"
+      "\n RELEASE       | \e[33m${RELEASE}\e[0m"
+      "\n RELEASE       | \e[33m${RELEASE}\e[0m"
+      "\n CHART         | \e[33m${CHART}\e[0m"
+      "\n CHART_VERSION | \e[33m${CHART_VERSION}\e[0m"
+      "\n VALUES_FILE   | \e[33m${VALUES_FILE}\e[0m"
+
+  script:
+    - helm upgrade
+      "$RELEASE"
+      "$REPO/$CHART"
+      --version "$CHART_VERSION"
+      --values "$VALUES_FILE"
+      --install
+      --create-namespace
+
+deploy ingress-nginx:
+  extends: .helm_template
+  variables:
+    REPO: ingress-nginx
+    CHART: ingress-nginx
+    CHART_VERSION: '3.3.0'
+    VALUES_FILE: helm/ingress-nginx.values.yml
+  environment:
+    name: cluster/ingress-nginx
+    kubernetes:
+      namespace: ingress-nginx
