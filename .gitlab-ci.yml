@@ -6,17 +6,6 @@ workflow:
 
 stages:
 - helm
-- diagnostics
-
-256-colors:
-  stage: diagnostics
-  image: ubuntu:20.04
-  script: scripts/256-colors.sh
-
-colors_and_formatting:
-  stage: diagnostics
-  image: ubuntu:20.04
-  script: scripts/colors_and_formatting.sh
 
 .helm_template:
   image:
