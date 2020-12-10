@@ -6,12 +6,36 @@ workflow:
 
 stages:
 - helm
+- dependencies
+- build
+- package
+- prepare
+- deploy
+
+create image-pull secret:
+  stage: helm
+  needs: []
+  image:
+    name: bitnami/kubectl:1.18
+    entrypoint: [""]
+  script:
+    - kubectl create secret docker-registry gitlab-registry
+        --docker-server="$CI_REGISTRY"
+        --docker-username="$CI_DEPLOY_USER"
+        --docker-password="$CI_DEPLOY_PASSWORD"
+        --docker-email="$GITLAB_USER_EMAIL"
+        -o yaml --dry-run=client | kubectl apply -f -
+  environment:
+    name: cluster/gitlab-registry-secret
+    kubernetes:
+      namespace: default
 
 .helm_template:
+  stage: helm
+  needs: []
   image:
     name: alpine/helm:3.3.4
     entrypoint: ['']
-  stage: helm
   variables:
     REPO: stable
     CHART: '?'
@@ -57,3 +81,78 @@ deploy ingress-nginx:
     name: cluster/ingress-nginx
     kubernetes:
       namespace: ingress-nginx
+
+install blog dependencies:
+  stage: dependencies
+  image: node:14.8.0
+  script:
+    - cd blog
+    - yarn install
+  artifacts:
+    paths:
+      - node_modules
+    expire_in: 1 week
+
+build blog:
+  stage: build
+  needs: ['install blog dependencies']
+  image:
+    name: klakegg/hugo:0.74.3
+    entrypoint: [""]
+  script:
+    - cd blog
+    - hugo
+  artifacts:
+    paths:
+      - blog/public
+
+package blog:
+  stage: package
+  needs: ['install blog dependencies', 'build blog']
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - cd blog
+
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+
+    - /kaniko/executor
+        --context $CI_PROJECT_DIR/blog
+        --dockerfile $CI_PROJECT_DIR/blog/Dockerfile
+        --destination $CI_REGISTRY_IMAGE/blog:$CI_COMMIT_REF_SLUG
+
+prepare blog deployment:
+  stage: prepare
+  needs: []
+  image: ubuntu:20.04
+  script:
+    - apt-get update
+    - apt-get install -y software-properties-common
+    - add-apt-repository ppa:rmescandon/yq
+    - apt-get update
+    - apt-get install -y yq
+
+    - ./scripts/gen-blog-deploy.sh
+  environment:
+    name: review/$CI_COMMIT_REF_SLUG
+    action: prepare
+    kubernetes:
+      namespace: default
+  artifacts:
+    paths:
+      - ./build/kustomize
+    expire_in: 1 week
+
+deploy blog:
+  stage: deploy
+  needs: ['create image-pull secret', 'package blog', 'prepare blog deployment']
+  image:
+    name: bitnami/kubectl:1.18
+    entrypoint: [""]
+  script:
+    - kubectl apply -k ./build/kustomize
+  environment:
+    name: review/$CI_COMMIT_REF_SLUG
+    kubernetes:
+      namespace: default
