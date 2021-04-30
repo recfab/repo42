@@ -5,154 +5,160 @@ workflow:
     - if: '$CI_COMMIT_TAG'
 
 stages:
-- helm
-- dependencies
-- build
-- package
-- prepare
-- deploy
+  - whatever
+# - helm
+# - dependencies
+# - build
+# - package
+# - prepare
+# - deploy
 
-create image-pull secret:
-  stage: helm
-  needs: []
-  image:
-    name: bitnami/kubectl:1.18
-    entrypoint: [""]
+whatever:
+  stage: whatever
   script:
-    - kubectl create secret docker-registry gitlab-registry
-        --docker-server="$CI_REGISTRY"
-        --docker-username="$CI_DEPLOY_USER"
-        --docker-password="$CI_DEPLOY_PASSWORD"
-        --docker-email="$GITLAB_USER_EMAIL"
-        -o yaml --dry-run=client | kubectl apply -f -
-  environment:
-    name: cluster/gitlab-registry-secret
-    kubernetes:
-      namespace: default
+    - echo "I don't feel like dealing with CI right now."
 
-.helm_template:
-  stage: helm
-  needs: []
-  image:
-    name: alpine/helm:3.3.4
-    entrypoint: ['']
-  variables:
-    REPO: stable
-    CHART: '?'
-    CHART_VERSION: '?'
-    VALUES_FILE: '?'
-  before_script:
-    - echo -e "Working in \e[33m${PWD}\e[0m."
+# create image-pull secret:
+#   stage: helm
+#   needs: []
+#   image:
+#     name: bitnami/kubectl:1.18
+#     entrypoint: [""]
+#   script:
+#     - kubectl create secret docker-registry gitlab-registry
+#         --docker-server="$CI_REGISTRY"
+#         --docker-username="$CI_DEPLOY_USER"
+#         --docker-password="$CI_DEPLOY_PASSWORD"
+#         --docker-email="$GITLAB_USER_EMAIL"
+#         -o yaml --dry-run=client | kubectl apply -f -
+#   environment:
+#     name: cluster/gitlab-registry-secret
+#     kubernetes:
+#       namespace: default
 
-    - chmod go-r $KUBECONFIG
+# .helm_template:
+#   stage: helm
+#   needs: []
+#   image:
+#     name: alpine/helm:3.3.4
+#     entrypoint: ['']
+#   variables:
+#     REPO: stable
+#     CHART: '?'
+#     CHART_VERSION: '?'
+#     VALUES_FILE: '?'
+#   before_script:
+#     - echo -e "Working in \e[33m${PWD}\e[0m."
 
-    - helm repo add stable https://kubernetes-charts.storage.googleapis.com
+#     - chmod go-r $KUBECONFIG
 
-    - helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-    - helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-    - helm repo update
+#     - helm repo add stable https://kubernetes-charts.storage.googleapis.com
 
-    - RELEASE="${RELEASE:-$CHART}"
+#     - helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+#     - helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+#     - helm repo update
 
-    - echo -e "Using variables:"
-      "\n RELEASE       | \e[33m${RELEASE}\e[0m"
-      "\n RELEASE       | \e[33m${RELEASE}\e[0m"
-      "\n CHART         | \e[33m${CHART}\e[0m"
-      "\n CHART_VERSION | \e[33m${CHART_VERSION}\e[0m"
-      "\n VALUES_FILE   | \e[33m${VALUES_FILE}\e[0m"
+#     - RELEASE="${RELEASE:-$CHART}"
 
-  script:
-    - helm upgrade
-      "$RELEASE"
-      "$REPO/$CHART"
-      --version "$CHART_VERSION"
-      --values "$VALUES_FILE"
-      --install
-      --create-namespace
+#     - echo -e "Using variables:"
+#       "\n RELEASE       | \e[33m${RELEASE}\e[0m"
+#       "\n RELEASE       | \e[33m${RELEASE}\e[0m"
+#       "\n CHART         | \e[33m${CHART}\e[0m"
+#       "\n CHART_VERSION | \e[33m${CHART_VERSION}\e[0m"
+#       "\n VALUES_FILE   | \e[33m${VALUES_FILE}\e[0m"
 
-deploy ingress-nginx:
-  extends: .helm_template
-  variables:
-    REPO: ingress-nginx
-    CHART: ingress-nginx
-    CHART_VERSION: '3.3.0'
-    VALUES_FILE: helm/ingress-nginx.values.yml
-  environment:
-    name: cluster/ingress-nginx
-    kubernetes:
-      namespace: ingress-nginx
+#   script:
+#     - helm upgrade
+#       "$RELEASE"
+#       "$REPO/$CHART"
+#       --version "$CHART_VERSION"
+#       --values "$VALUES_FILE"
+#       --install
+#       --create-namespace
 
-install blog dependencies:
-  stage: dependencies
-  image: node:14.8.0
-  script:
-    - cd blog
-    - yarn install
-  artifacts:
-    paths:
-      - node_modules
-    expire_in: 1 week
+# deploy ingress-nginx:
+#   extends: .helm_template
+#   variables:
+#     REPO: ingress-nginx
+#     CHART: ingress-nginx
+#     CHART_VERSION: '3.3.0'
+#     VALUES_FILE: helm/ingress-nginx.values.yml
+#   environment:
+#     name: cluster/ingress-nginx
+#     kubernetes:
+#       namespace: ingress-nginx
 
-build blog:
-  stage: build
-  needs: ['install blog dependencies']
-  image:
-    name: klakegg/hugo:0.74.3
-    entrypoint: [""]
-  script:
-    - cd blog
-    - hugo
-  artifacts:
-    paths:
-      - blog/public
+# install blog dependencies:
+#   stage: dependencies
+#   image: node:14.8.0
+#   script:
+#     - cd blog
+#     - yarn install
+#   artifacts:
+#     paths:
+#       - node_modules
+#     expire_in: 1 week
 
-package blog:
-  stage: package
-  needs: ['install blog dependencies', 'build blog']
-  image:
-    name: gcr.io/kaniko-project/executor:debug
-    entrypoint: [""]
-  script:
-    - cd blog
+# build blog:
+#   stage: build
+#   needs: ['install blog dependencies']
+#   image:
+#     name: klakegg/hugo:0.74.3
+#     entrypoint: [""]
+#   script:
+#     - cd blog
+#     - hugo
+#   artifacts:
+#     paths:
+#       - blog/public
 
-    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+# package blog:
+#   stage: package
+#   needs: ['install blog dependencies', 'build blog']
+#   image:
+#     name: gcr.io/kaniko-project/executor:debug
+#     entrypoint: [""]
+#   script:
+#     - cd blog
 
-    - /kaniko/executor
-        --context $CI_PROJECT_DIR/blog
-        --dockerfile $CI_PROJECT_DIR/blog/Dockerfile
-        --destination $CI_REGISTRY_IMAGE/blog:$CI_COMMIT_REF_SLUG
+#     - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
 
-prepare blog deployment:
-  stage: prepare
-  needs: []
-  image: ubuntu:20.04
-  script:
-    - apt-get update
-    - apt-get install -y software-properties-common
-    - add-apt-repository ppa:rmescandon/yq
-    - apt-get update
-    - apt-get install -y yq
+#     - /kaniko/executor
+#         --context $CI_PROJECT_DIR/blog
+#         --dockerfile $CI_PROJECT_DIR/blog/Dockerfile
+#         --destination $CI_REGISTRY_IMAGE/blog:$CI_COMMIT_REF_SLUG
 
-    - ./scripts/gen-blog-deploy.sh
-  environment:
-    name: review/$CI_COMMIT_REF_SLUG
-    action: prepare
-    kubernetes:
-      namespace: default
-  artifacts:
-    paths:
-      - ./build/kustomize
-    expire_in: 1 week
+# prepare blog deployment:
+#   stage: prepare
+#   needs: []
+#   image: ubuntu:20.04
+#   script:
+#     - apt-get update
+#     - apt-get install -y software-properties-common
+#     - add-apt-repository ppa:rmescandon/yq
+#     - apt-get update
+#     - apt-get install -y yq
 
-deploy blog:
-  stage: deploy
-  needs: ['create image-pull secret', 'package blog', 'prepare blog deployment']
-  image:
-    name: bitnami/kubectl:1.18
-    entrypoint: [""]
-  script:
-    - kubectl apply -k ./build/kustomize
-  environment:
-    name: review/$CI_COMMIT_REF_SLUG
-    kubernetes:
-      namespace: default
+#     - ./scripts/gen-blog-deploy.sh
+#   environment:
+#     name: review/$CI_COMMIT_REF_SLUG
+#     action: prepare
+#     kubernetes:
+#       namespace: default
+#   artifacts:
+#     paths:
+#       - ./build/kustomize
+#     expire_in: 1 week
+
+# deploy blog:
+#   stage: deploy
+#   needs: ['create image-pull secret', 'package blog', 'prepare blog deployment']
+#   image:
+#     name: bitnami/kubectl:1.18
+#     entrypoint: [""]
+#   script:
+#     - kubectl apply -k ./build/kustomize
+#   environment:
+#     name: review/$CI_COMMIT_REF_SLUG
+#     kubernetes:
+#       namespace: default
