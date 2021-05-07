@@ -19,7 +19,6 @@ Open Merge Request:
   before_script: [] # We do not need any setup work, let's remove the global one (if any)
   variables:
     GIT_STRATEGY: none # We do not need a clone of the GIT repository to create a Merge Request
-    GITLAB_PRIVATE_TOKEN: $CI_JOB_TOKEN
   stage: Open Merge Request
   only:
     - branches
