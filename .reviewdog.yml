@@ -3,6 +3,6 @@ runner:
     cmd: shellcheck --format checkstyle ./**/*.sh
     format: checkstyle
   cspell:
-    cmd: cspell *
+    cmd: cspell lint *
     errorformat:
       - "%f:%l:%c - %m"
