@@ -45,7 +45,7 @@ Reviewdog:
   script:
     -  ./bin/reviewdog -reporter=gitlab-mr-discussion
   variables:
-    REVIEWDOG_GITLAB_API_TOKEN: $CI_JOB_TOKEN
+    REVIEWDOG_GITLAB_API_TOKEN: $GITLAB_PRIVATE_TOKEN
 
 # create image-pull secret:
 #   stage: helm
