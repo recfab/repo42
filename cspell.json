@@ -1,0 +1,15 @@
+{
+    "version": "0.1",
+    "language": "en",
+    "dictionaries": [
+        "bash",
+        "csharp",
+        "css",
+        "fonts",
+        "go",
+        "softwareTerms"
+    ],
+    "words": [
+        "kubernetes"
+    ]
+}
