@@ -1,0 +1,8 @@
+runner:
+  shellcheck:
+    cmd: shellcheck --format checkstyle ./**/*.sh
+    format: checkstyle
+  cspell:
+    cmd: cspell *
+    errorformat:
+      - "%f:%l:%c - %m"

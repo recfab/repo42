@@ -1,11 +1,12 @@
-workflow:
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
-    - if: '$CI_COMMIT_TAG'
+# workflow:
+#   rules:
+#     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+#     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+#     - if: '$CI_COMMIT_TAG'
 
 stages:
-  - whatever
+  - Open Merge Request
+  - Reviewdog
 # - helm
 # - dependencies
 # - build
@@ -13,10 +14,38 @@ stages:
 # - prepare
 # - deploy
 
-whatever:
-  stage: whatever
+Open Merge Request:
+  image: tmaier/gitlab-auto-merge-request:1
+  before_script: [] # We do not need any setup work, let's remove the global one (if any)
+  variables:
+    GIT_STRATEGY: none # We do not need a clone of the GIT repository to create a Merge Request
+  stage: Open Merge Request
+  only:
+    - branches
+  except:
+    - trunk
   script:
-    - echo "I don't feel like dealing with CI right now."
+    - merge-request.sh # The name of the script
+
+Reviewdog:
+  only:
+    - branches
+  except:
+    - trunk
+  stage: Reviewdog
+  image: golang:latest
+  cache:
+    key:
+      files:
+        - go.sum
+    paths:
+      - .cache
+  before_script:
+    - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s
+  script:
+    -  reviewdog -reporter=gitlab-mr-discussion
+  variables:
+    REVIEWDOG_GITLAB_API_TOKEN: $CI_JOB_TOKEN
 
 # create image-pull secret:
 #   stage: helm
