@@ -43,7 +43,7 @@ Reviewdog:
   before_script:
     - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s
   script:
-    -  reviewdog -reporter=gitlab-mr-discussion
+    -  ./bin/reviewdog -reporter=gitlab-mr-discussion
   variables:
     REVIEWDOG_GITLAB_API_TOKEN: $CI_JOB_TOKEN
 
