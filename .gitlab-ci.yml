@@ -41,7 +41,7 @@ Reviewdog:
     paths:
       - .cache
   before_script:
-    - apk add --no-cache node npm shellcheck
+    - apt install -y nodejs npm shellcheck
     - npm install -g cspell
     - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s
   script:
