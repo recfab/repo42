@@ -42,7 +42,7 @@ Reviewdog:
     - npm install -g cspell@5.4.0
     - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b /usr/local/bin
   script:
-    -  reviewdog -diff="git diff $CI_DEFAULT_BRANCH" -reporter=local -tee
+    -  reviewdog -reporter=gitlab-mr-discussion
   variables:
     REVIEWDOG_GITLAB_API_TOKEN: $GITLAB_PRIVATE_TOKEN
 
