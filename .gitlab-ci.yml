@@ -42,8 +42,8 @@ Reviewdog:
       - .cache
   before_script:
     - apt-get update
-    - apt-get install -y nodejs npm shellcheck
-    - npm install -g cspell
+    - apt-get install -y nodejs npm shellcheck=0.5.0-3
+    - npm install -g cspell@5.4.0
     - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s
   script:
     -  ./bin/reviewdog -reporter=gitlab-mr-discussion
