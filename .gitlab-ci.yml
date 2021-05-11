@@ -23,7 +23,8 @@ Open Merge Request:
   only:
     - branches
   except:
-    - trunk
+    - $CI_DEFAULT_BRANCH
+    - $CI_MERGE_REQUEST_IID
   script:
     - merge-request.sh # The name of the script
 
