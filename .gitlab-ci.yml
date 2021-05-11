@@ -23,7 +23,7 @@ Open Merge Request:
   only:
     - branches
   except:
-    - $CI_DEFAULT_BRANCH
+    - $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
     - $CI_MERGE_REQUEST_IID
   script:
     - merge-request.sh # The name of the script
@@ -46,9 +46,9 @@ Reviewdog:
     - apt-get update
     - apt-get install -y nodejs=14.16.1-1nodesource1 shellcheck=0.5.0-3
     - npm install -g cspell@5.4.0
-    - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s
+    - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- ~/bin
   script:
-    -  ./bin/reviewdog -diff="git diff $CI_DEFAULT_BRANCH" -reporter=local -tee
+    -  ~/bin/reviewdog -diff="git diff $CI_DEFAULT_BRANCH" -reporter=local -tee
   variables:
     REVIEWDOG_GITLAB_API_TOKEN: $GITLAB_PRIVATE_TOKEN
 
