@@ -42,8 +42,9 @@ Reviewdog:
     paths:
       - .cache
   before_script:
+    - curl -sL https://deb.nodesource.com/setup_14.x | bash -  # Setup NodeSource
     - apt-get update
-    - apt-get install -y nodejs npm shellcheck=0.5.0-3
+    - apt-get install -y nodejs=14.16.1-1nodesource1 shellcheck=0.5.0-3
     - npm install -g cspell@5.4.0
     - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s
   script:
