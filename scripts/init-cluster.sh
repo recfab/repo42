@@ -26,7 +26,7 @@ echo
 apiurl=$(TERM=dumb kubectl cluster-info | grep 'Kubernetes master' | awk '/http/ { print $NF }')
 
 secretName=$(kubectl get secrets | awk '/gitlab/ { print $1 }')
-# certData=$(kuxbectl get secret "$secretName" -o=jsonpath="{ ['data']['ca\.crt'] }" | base64 --decode)
+# certData=$(kubectl get secret "$secretName" -o=jsonpath="{ ['data']['ca\.crt'] }" | base64 --decode)
 serviceToken=$(kubectl get secret "$secretName" -o=jsonpath="{ ['data']['token'] }" | base64 --decode)
 
 switchNS 'Returning' "$currentNS"
