@@ -1,11 +1,12 @@
-workflow:
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
-    - if: '$CI_COMMIT_TAG'
+# workflow:
+#   rules:
+#     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+#     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+#     - if: '$CI_COMMIT_TAG'
 
 stages:
-  - whatever
+  - Open Merge Request
+  - Reviewdog
 # - helm
 # - dependencies
 # - build
@@ -13,10 +14,37 @@ stages:
 # - prepare
 # - deploy
 
-whatever:
-  stage: whatever
+Open Merge Request:
+  image: tmaier/gitlab-auto-merge-request:1
+  before_script: [] # We do not need any setup work, let's remove the global one (if any)
+  variables:
+    GIT_STRATEGY: none # We do not need a clone of the GIT repository to create a Merge Request
+  stage: Open Merge Request
+  only:
+    - branches
+  except:
+    - $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+    - $CI_MERGE_REQUEST_IID
   script:
-    - echo "I don't feel like dealing with CI right now."
+    - merge-request.sh # The name of the script
+
+Reviewdog:
+  only:
+    - branches
+  except:
+    - trunk
+  stage: Reviewdog
+  image: golang:latest
+  before_script:
+    - curl -sL https://deb.nodesource.com/setup_14.x | bash -  # Setup NodeSource
+    - apt-get update
+    - apt-get install -y nodejs=14.16.1-1nodesource1 shellcheck=0.5.0-3
+    - npm install -g cspell@5.4.0
+    - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b /usr/local/bin
+  script:
+    -  reviewdog -reporter=gitlab-mr-discussion
+  variables:
+    REVIEWDOG_GITLAB_API_TOKEN: $GITLAB_PRIVATE_TOKEN
 
 # create image-pull secret:
 #   stage: helm

@@ -1,0 +1,20 @@
+{
+    "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/master/cspell.schema.json",
+    "version": "0.1",
+    "language": "en",
+    "dictionaries": [
+        "bash",
+        "csharp",
+        "css",
+        "fonts",
+        "go",
+        "softwareTerms"
+    ],
+    "words": [
+        "jsonpath",
+        "kubernetes"
+    ],
+    "ignorePaths": [
+        "yarn.lock"
+    ]
+}
