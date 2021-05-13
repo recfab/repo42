@@ -1,6 +1,5 @@
-tasks
+# Tasks
 
-devcontainer
-lefthook 
-reviewdog
-spelling
+- [ ] devcontainer
+- [ ] lefthook
+- [ ] markdown lint
