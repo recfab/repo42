@@ -2,4 +2,6 @@
 
 - [ ] devcontainer
 - [ ] lefthook
-- [ ] markdown lint
+- linters
+  - [ ] markdown lint
+  - [ ] yaml lint

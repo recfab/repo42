@@ -1,0 +1,3 @@
+services:
+  grakn:
+    image: graknlabs/grakn:2.0.2
