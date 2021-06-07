@@ -1,3 +1,6 @@
 [submodule "blog/themes/terminal"]
 	path = blog/themes/terminal
 	url = https://github.com/panr/hugo-theme-terminal.git
+[submodule "typedb-protocol"]
+	path = typedb-protocol
+	url = https://github.com/vaticle/typedb-protocol.git
