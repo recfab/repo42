@@ -1,8 +1,0 @@
-runner:
-  shellcheck:
-    cmd: shellcheck --format checkstyle ./**/*.sh
-    format: checkstyle
-  cspell:
-    cmd: cspell lint --relative --no-progress --no-summary ./*/**
-    errorformat:
-      - "%f:%l:%c - %m"
