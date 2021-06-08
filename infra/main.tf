@@ -25,8 +25,10 @@ resource "digitalocean_kubernetes_cluster" "development" {
   version      = data.digitalocean_kubernetes_versions.main.latest_version
 
   node_pool {
+    # cspell:disable
     name = "pool-kd4zwylv8"
     size = "s-1vcpu-2gb"
+    # cspell:enable
 
     node_count = 1
   }

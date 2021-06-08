@@ -8,14 +8,27 @@
         "css",
         "fonts",
         "go",
+        "node",
+        "npm",
         "softwareTerms"
     ],
+    "allowCompoundWords": true,
     "words": [
+        "GitLab",
         "jsonpath",
+        "kubectl",
         "kubernetes",
-        "structopt"
+        "kustomization",
+        "kustomize",
+        "Namen",
+        "pbcopy",
+        "recfab",
+        "shvars",
+        "structopt",
+        "Yael"
     ],
     "ignorePaths": [
-        "yarn.lock"
+        "*.lock",
+        "typedb-protocol"
     ]
 }
