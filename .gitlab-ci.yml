@@ -8,6 +8,8 @@ stages:
 
 shellcheck:
   stage: lint
+  needs: []
+  dependencies: []
   image:
     name: koalaman/shellcheck-alpine:stable
     entrypoint: [""]
