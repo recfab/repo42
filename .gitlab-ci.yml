@@ -9,7 +9,7 @@ stages:
 shellcheck:
   stage: lint
   image:
-    name: koalaman/shellcheck:stable
+    name: koalaman/shellcheck-alpine:stable
     entrypoint: [""]
   script:
     - shellcheck ./**/*.sh
