@@ -15,3 +15,15 @@ shellcheck:
     entrypoint: [""]
   script:
     - shellcheck ./**/*.sh
+
+cspell:
+  stage: lint
+  needs: []
+  dependencies: []
+  image:
+    name: node:14-alpine
+    entrypoint: [""]
+  before_script:
+    - npm install -g cspell
+  script:
+    - cspell lint --relative --no-progress --no-summary ./*/**
