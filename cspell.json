@@ -4,10 +4,10 @@
   "language": "en",
   "dictionaries": [
     "bash",
-    "go",
     "csharp",
     "css",
     "fonts",
+    "go",
     "node",
     "npm",
     "softwareTerms"
