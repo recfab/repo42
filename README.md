@@ -8,7 +8,7 @@ Where I keep most of my stuff.
   - broken references, like a Deployment referencing a ConfigMap that doesn't exist
   - orphaned resources, like a ConfigMap that's not used by any Deployments
 - Resource Roomba. Really broad concept, so might actually be multiple tools. Cleanup "dirt" from kubernetes
-  - Delete the kind of thing found by the kube linter
+  - Delete the kind of thing found by the kubernetes linter
   - Delete resources for an environment that isn't associated with a branch in GitLab
 - GitLab CI files in a non-shit language. Anything is better than YAML. Might rely heavily on scripts.
 - Various graphics toys e.g. filigree, word art, other weird shit that looks cool.

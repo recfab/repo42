@@ -57,7 +57,7 @@ use kubectl to tell Master how many pods you want running at a given time and re
 ### "Microservices Applications"
 
 as opposed to monolith.
-cut up into smaller pieces that can be be scaled independenly
+cut up into smaller pieces that can be be scaled independently
 
 ### "Container Orchestration"
 - optimally runs your workloads
@@ -80,7 +80,7 @@ each cluster has at least one Master
   - kube-scheduler
   - kube-controller-manager
   - kube-cloud-controller
-- Role is to sched workloads in form of pods and handle all events.
+- Role is to schedule workloads in form of pods and handle all events.
 - phys or virtual
 - on-prem or cloud
 - eats its own dogfood - the components above are run in pods
@@ -202,7 +202,7 @@ kubectl delete deployment web1
 - Created in YAML or JSON
 - kube can create these for you
 - if you use YAML, they are converted to JSON and sent to the k8s API
-- imperitive
+- imperative
   - run kubectl commands
 - declarative
   - DSC : Desired state configuration
@@ -249,7 +249,7 @@ Controller types:
 ### Replica Sets
 
 - used to main a set of replica pods running at all times
-- will add or delete pods as neessary
+- will add or delete pods as necessary
 
 ### DaemonSet
 
@@ -282,7 +282,7 @@ Controller types:
 - most pods are stateless and any storage in the container / pod is lost when the pod dies
 - Kubernetes volumes may solve these problems
   - Container Storage Interface - many vendors supply a CSI compliant driver
-- A PersistentVolume (PV) is storage that has been provsioned by an admin or dynamically provisioned using Storage Classes
+- A PersistentVolume (PV) is storage that has been provisioned by an admin or dynamically provisioned using Storage Classes
 - A PersistentVolumeClaim (PVC) is a request for storage by the user
 
 ## Updating your application
@@ -311,7 +311,7 @@ kubectl rollout undo deploy/<deployment-name>
 ## Understanding Namespaces
 
 - a virtual cluster in the physical cluster
-- resoure names must be unique within the namespace
+- resource names must be unique within the namespace
 - by default, there are 3 namespaces
   - default
   - kube-system

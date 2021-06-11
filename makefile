@@ -14,9 +14,13 @@ lint: cspell shellcheck
 .PHONY: lint
 
 cspell:
-> cspell lint --relative --no-progress --no-summary ./*/**
+> cspell lint --no-progress "**/*"
 .PHONY: cspell
 
 shellcheck:
 > shellcheck ./**/*.sh
 .PHONY: shellcheck
+
+.tmp/sentinels/cspell.json: cspell.json
+> jq 'select(.words | sort) | select(.dictionaries | sort)' $< > $@
+> cp $@ $<

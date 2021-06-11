@@ -1,4 +1,5 @@
 ---
+<!-- cspell:disable -->
 title: Jewish Stuff
 date: 2018-02-25
 ---
