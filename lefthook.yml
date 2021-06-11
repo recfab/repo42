@@ -2,6 +2,15 @@
 # Refer for explanation to following link:
 # https://github.com/Arkweid/lefthook/blob/master/docs/full_guide.md
 #
+lint:
+  commands:
+    cspell:
+      run: cspell lint --no-progress "**/*"
+    shellcheck:
+      glob: "*/*.sh"
+      run: shellcheck {all_files}
+
+fix:
 # pre-push:
 #   commands:
 #     packages-audit:

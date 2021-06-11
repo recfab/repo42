@@ -10,17 +10,6 @@ ifeq ($(origin .RECIPEPREFIX), undefined)
 endif
 .RECIPEPREFIX = >
 
-lint: cspell shellcheck
-.PHONY: lint
-
-cspell:
-> cspell lint --no-progress "**/*"
-.PHONY: cspell
-
-shellcheck:
-> shellcheck ./**/*.sh
-.PHONY: shellcheck
-
 .tmp/sentinels/cspell.json: cspell.json
 > jq 'select(.words | sort) | select(.dictionaries | sort)' $< > $@
 > cp $@ $<
