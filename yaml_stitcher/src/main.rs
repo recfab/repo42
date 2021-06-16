@@ -8,5 +8,7 @@ struct Cli {
 
 fn main() {
     let args = Cli::from_args();
-    println!("Hello, world! {:?}", args.path);
+    println!("Working with path: {:?}", args.path);
+    let content = std::fs::read_to_string(&args.path).unwrap();
+    println!("file: {:?} has content: {:?}", args.path, content);
 }
