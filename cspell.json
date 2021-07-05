@@ -46,6 +46,7 @@
     "sched",
     "shvars",
     "structopt",
+    "tfplan",
     "typedb",
     "Ventyx",
     "VMWare",

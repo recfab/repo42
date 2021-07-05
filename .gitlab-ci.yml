@@ -36,6 +36,7 @@ cspell:
     name: hashicorp/terraform:1.0.0
     entrypoint: [""]
   variables:
+    TF_IN_AUTOMATION: 'true'
     TF_HTTP_ADDRESS: https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/terraform/state/$CI_COMMIT_REF_SLUG
     TF_HTTP_USERNAME: gitlab-ci-token
     TF_HTTP_PASSWORD: $CI_JOB_TOKEN
@@ -55,3 +56,21 @@ tf-validate:
   dependencies: []
   script:
     - terraform validate
+
+tf-plan:
+  extends:
+    - .terraform
+  stage: terraform plan
+  needs:
+    - tf-validate
+  dependencies:
+    - tf-validate
+  script:
+    - apk add --no-cache jq
+    - terraform plan -out plan.tfplan
+    - terraform show plan.tfplan | jq -f ../tf-plan.jq > plan.json
+  artifacts:
+    paths:
+      - infra/plan.tfplan
+    reports:
+      terraform: infra/plan.json
