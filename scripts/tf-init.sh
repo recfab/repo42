@@ -5,7 +5,7 @@ IFS=$'\n\t'
 export CI_PROJECT_ID=${CI_PROJECT_ID:-21637940}
 export CI_COMMIT_REF_SLUG=${CI_COMMIT_REF_SLUG:-main}
 
-tf_state_name="main"
+tf_state_name="$CI_COMMIT_REF_SLUG"
 export TF_HTTP_ADDRESS="https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/terraform/state/$tf_state_name"
 
 if [[ -z ${CI_JOB_TOKEN:+x} ]]; then
@@ -22,3 +22,5 @@ export TF_HTTP_LOCK_METHOD='POST'
 export TF_HTTP_UNLOCK_METHOD='DELETE'
 
 terraform init
+
+terraform plan -out plan.tfplan

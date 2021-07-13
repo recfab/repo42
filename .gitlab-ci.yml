@@ -33,7 +33,7 @@ cspell:
 
 .terraform:
   image:
-    name: hashicorp/terraform:1.0.0
+    name: hashicorp/terraform:1.0.2
     entrypoint: [""]
   variables:
     TF_IN_AUTOMATION: 'true'
