@@ -1,9 +1,13 @@
 ---
 tags:
+  - computerphile
   - video
 ---
-# Maze Solving
+# Video: Maze Solving
 
 Followup to [Djikstra's Algorithm](./djikstras-algorithm.md)
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rop0W4QDOUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Maze Solving][screenshot]][video]
+
+[screenshot]: https://img.youtube.com/vi/rop0W4QDOUI/0.jpg
+[video]: https://www.youtube.com/watch?v=rop0W4QDOUI

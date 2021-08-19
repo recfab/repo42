@@ -1,5 +1,5 @@
 ---
-tags: computerphile
+tags: [computerphile, video]
 ---
 
 # Video: Djikstra's Algorithm
