@@ -1,6 +1,6 @@
-# Main
+# Yggdrasil
 
-Where I keep most of my stuff.
+The World Tree, i.e. where I keep most of my personal code.
 
 ## Ideas for projects
 
