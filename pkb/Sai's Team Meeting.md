@@ -1,0 +1,26 @@
+---
+date: 2021-01-28T10:00AM
+---
+
+- official announcement later today
+
+- Sai's team is moving orgs
+    - moving from Jame's org to Brian Benincasa's group
+    - --> Keep *platform teams* in same group
+    - vote of confidence in our work over the last few years
+
+- Organization subgroups
+    - Engineering
+    - UX
+    - QA
+    - Program Management
+
+- Team Identity: Digital Platforms
+- 2 types of platform
+    - technical platforms
+    - platforms for play
+
+- expect skip-level with Brian in coming weeks
+- Team all hands in mid-february
+
+- post-COVID: plan to be back in but with more flexibility
