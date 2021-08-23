@@ -3,9 +3,9 @@ tags:
   - computerphile
   - video
 ---
-# Video: TOR Hidden Services
+# TOR Hidden Services
 
-Watch [Max's video on the Dark Web](./Computerphile/dark-web.md) first
+Watch [Max's video on the Dark Web](./dark-web.md) first
 
 [![TOR Hidden Services][screenshot]][video]
 
