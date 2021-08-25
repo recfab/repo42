@@ -1,5 +1,7 @@
 # TPM (Trusted Platform Module)
 
+[#computerphile](./README.md)
+
 https://www.youtube.com/watch?v=RW2zHvVO09g
 
 Can store and use keys, but can't read it out

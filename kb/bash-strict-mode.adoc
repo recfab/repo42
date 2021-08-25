@@ -1,0 +1,14 @@
+= Bash Strict Mode
+:source-highlighter: hightlight.js
+
+:orig: http://redsymbol.net/articles/unofficial-bash-strict-mode/
+
+link:{orig}[Original Article]
+
+.TL;DR
+[source, bash]
+----
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+----

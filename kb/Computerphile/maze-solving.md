@@ -1,9 +1,14 @@
 ---
+id: 20210825151820
+tags: []
+references: []
 tags:
   - computerphile
   - video
 ---
 # Video: Maze Solving
+
+[#computerphile](./README.md)
 
 Followup to [Djikstra's Algorithm](./djikstras-algorithm.md)
 
