@@ -1,11 +1,6 @@
----
-tags:
-  - computerphile
-  - video
----
 # Deep Dark Web
 
-tags: #video [#computerphile](./README.md)
+tags: #video #computerphile
 
 ## Part 1: Web vs Internet
 

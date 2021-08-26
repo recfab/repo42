@@ -1,8 +1,0 @@
-= Art Fraud
-
-.Video: I did art fraud to prove a point
-video::13zqeZdyQiM[youtube]
-
-. Misattribution
-. Provenance traps
-. Forgeries

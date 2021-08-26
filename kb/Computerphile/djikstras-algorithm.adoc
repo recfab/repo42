@@ -1,7 +1,0 @@
-= Djikstra's Algorithm
-:icons: font
-
-icon:tags[] computerphile, video
-
-video::GazC3A4OQTE[youtube]
-

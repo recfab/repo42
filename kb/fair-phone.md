@@ -1,0 +1,6 @@
+# Video: Is This the Most Sustainable Smartphone?
+
+[![Watch on YouTube][screenshot]][video]
+
+[screenshot]: https://img.youtube.com/vi/Ebv3GiKyCaw/0.jpg
+[video]: https://www.youtube.com/watch?v=Ebv3GiKyCaw

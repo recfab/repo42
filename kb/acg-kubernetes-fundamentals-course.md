@@ -1,4 +1,4 @@
-# Working through ACG Kubernetes Fundamentals Course
+# A Cloud Guru -  Kubernetes Fundamentals Course
 
 ## From the "What you'll learn in this course" slide
 

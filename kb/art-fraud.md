@@ -1,0 +1,10 @@
+# Video: I did art fraud to prove a point
+
+[![Watch on YouTube][screenshot]][video]
+
+1. Misattribution
+2. Provenance traps
+3. Forgeries
+
+[screenshot]: https://img.youtube.com/vi/13zqeZdyQiM/0.jpg
+[video]: https://www.youtube.com/watch?v=13zqeZdyQiM
