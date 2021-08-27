@@ -3,7 +3,11 @@
 ## Misc. Tasks
 
 - TODO Rollover Milliman 401(k)
-- TODO :magnify: Fair Phone
+- TODO 🔎 Fair Phone
+- TODO Hypothesis Driven Development
+- TODO Shell Reference
+- TODO 🎨 Portfolio for Mino's art
+- TODO Create diagrams from a live system
 
 ## Reading List 📚
 

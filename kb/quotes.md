@@ -2,9 +2,8 @@
 title: Quotes
 date: 2018-02-25
 ---
+# Quotes
 
-= Quotes
-:nofooter:
 
 [quote, Hillel the Elder, b. Shabbat 31a]
 > That which is hateful to you, do not unto another: This is the whole Torah. The rest is commentary -- now go study.

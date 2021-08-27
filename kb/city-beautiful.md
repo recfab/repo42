@@ -4,7 +4,7 @@
 
 ## Video: How Cities Grow
 
-## Density 
+## Density
 
 affects which type of transit. For example:
 
