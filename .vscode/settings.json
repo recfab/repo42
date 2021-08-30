@@ -6,6 +6,7 @@
   "todo-tree.filtering.ignoreGitSubmodules": true,
   "todo-tree.filtering.includeHiddenFiles": true,
   "todo-tree.filtering.useBuiltInExcludes": "search excludes",
-  "mzettel.filenameTemplate": "${date}_${time}.md",
-  "mzettel.notesPath": "kb"
+  "foam.decorations.links.enable": true,
+  "foam.dateSnippets.afterCompletion": "navigateToNote",
+  "foam.openDailyNote.titleFormat": "yyyy-mm-dd Daily",
 }

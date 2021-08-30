@@ -1,6 +1,7 @@
 #r "nuget: Markdig"
 #r "nuget: YamlDotNet"
 
+open System
 open System.IO
 open System.Linq
 open Markdig
@@ -30,6 +31,10 @@ let pipeline =
   MarkdownPipelineBuilder()
     .UseYamlFrontMatter()
     .Build()
+
+let zettleIdPrefix () =
+  let d = DateTime.UtcNow
+  d.ToString("yyyyMMddhhmm")
 
 let deserializer =
   DeserializerBuilder()
