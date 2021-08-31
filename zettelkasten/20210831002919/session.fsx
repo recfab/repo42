@@ -1,4 +1,4 @@
-// ---- types and logic function ----
+// tag::types[]
 type State = (int * int * int)
 type Lever = State -> State
 
@@ -11,8 +11,9 @@ let bump n =
 
 let leftLever (a, b, c) = (a, bump b, bump c)
 let rightLever (a, b, c) = (bump a, bump b, c)
+// end::types[]
 
-// ---- display functions ----
+// tag::display[]
 let showRef (a, b, c) = sprintf "st%d%d%d" a b c
 
 let showDef (a, b, c) =
@@ -25,6 +26,7 @@ let showLever (lever: Lever) label (st: State) =
 
 let showLeftLever = showLever leftLever "left"
 let showRightLever = showLever rightLever "right"
+// end::display[]
 
 // ---- data ---
 let start = (3, 3, 3)
@@ -41,12 +43,13 @@ let allStates =
 
 // ---- print it! ---
 let diagram =
-  [ "stateDiagram-v2" ]
+  [ "@startuml" ]
   @ [ sprintf "[*] --> %s" (showRef start) ]
-    @ (List.map showDef allStates)
-      @ (List.map showLeftLever allStates)
-        @ (List.map showRightLever allStates)
-          @ [ sprintf "%s --> [*]" (showRef goal) ]
+    // @ (List.map showDef allStates)
+    @ (List.map showLeftLever allStates)
+      @ (List.map showRightLever allStates)
+        @ [ sprintf "%s --> [*]" (showRef goal) ]
+          @ [ "@enduml" ]
 
 let diagram' = String.concat "\n" diagram
 

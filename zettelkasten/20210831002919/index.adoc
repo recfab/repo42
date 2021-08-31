@@ -1,0 +1,9 @@
+= Myst Remake: Clock Tower Puzzle
+:source-highlighter: highlight.js
+
+[source,fsharp]
+----
+include::../myst.fsx[tag=types]
+----
+
+plantuml::diagram.puml[]

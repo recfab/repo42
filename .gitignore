@@ -43,3 +43,6 @@ target/
 
 .fake
 .ionide
+
+diag-*.png
+.asciidoctor

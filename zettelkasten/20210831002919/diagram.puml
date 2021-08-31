@@ -1,37 +1,5 @@
-# Myst Clock Tower Puzzle
-
-
-
-```mermaid
-stateDiagram-v2
+@startuml
 [*] --> st333
-state "1\n1\n1" as st111
-state "1\n1\n2" as st112
-state "1\n1\n3" as st113
-state "1\n2\n1" as st121
-state "1\n2\n2" as st122
-state "1\n2\n3" as st123
-state "1\n3\n1" as st131
-state "1\n3\n2" as st132
-state "1\n3\n3" as st133
-state "2\n1\n1" as st211
-state "2\n1\n2" as st212
-state "2\n1\n3" as st213
-state "2\n2\n1" as st221
-state "2\n2\n2" as st222
-state "2\n2\n3" as st223
-state "2\n3\n1" as st231
-state "2\n3\n2" as st232
-state "2\n3\n3" as st233
-state "3\n1\n1" as st311
-state "3\n1\n2" as st312
-state "3\n1\n3" as st313
-state "3\n2\n1" as st321
-state "3\n2\n2" as st322
-state "3\n2\n3" as st323
-state "3\n3\n1" as st331
-state "3\n3\n2" as st332
-state "3\n3\n3" as st333
 st111 --> st122 : left
 st112 --> st123 : left
 st113 --> st121 : left
@@ -87,4 +55,4 @@ st331 --> st111 : right
 st332 --> st112 : right
 st333 --> st113 : right
 st221 --> [*]
-```
+@enduml
