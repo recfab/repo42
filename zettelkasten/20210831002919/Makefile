@@ -10,5 +10,8 @@ ifeq ($(origin .RECIPEPREFIX), undefined)
 endif
 .RECIPEPREFIX = >
 
+diagram.svg: diagram.puml
+> plantuml -tsvg diagram.puml
+
 diagram.puml: session.fsx
 > dotnet fsi session.fsx > diagram.puml

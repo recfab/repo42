@@ -23,7 +23,8 @@ include::session.fsx[tags=levers]
 
 There is a `diagram` function, which generates a State Machine diagram
 
-plantuml::diagram.puml[]
+.State machine
+image::diagram.svg[]
 
 Unfortunately, it never resolves.
-I must have the wrong clue and/or misunderstood something.
+I must have the misunderstood the rules, or found the wrong starting clue.
