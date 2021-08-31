@@ -2,11 +2,10 @@
   "files.associations": {
     "*.hcl": "terraform"
   },
-  "markdown-note-factory.fileNameFormat": "lowercase-slugged",
   "todo-tree.filtering.ignoreGitSubmodules": true,
   "todo-tree.filtering.includeHiddenFiles": true,
   "todo-tree.filtering.useBuiltInExcludes": "search excludes",
   "foam.decorations.links.enable": true,
   "foam.dateSnippets.afterCompletion": "navigateToNote",
-  "foam.openDailyNote.titleFormat": "yyyy-mm-dd Daily",
+  "asciidoc.preview.openAsciiDocLinks": "inEditor",
 }
