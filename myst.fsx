@@ -1,8 +1,6 @@
+// ---- types and logic function ----
 type State = (int * int * int)
 type Lever = State -> State
-
-let start = (3, 3, 3)
-let goal = (2, 2, 1)
 
 let bump n =
   match n with
@@ -11,13 +9,14 @@ let bump n =
   | 3 -> 1
   | _ -> failwith "Well, fuck"
 
+let leftLever (a, b, c) = (a, bump b, bump c)
+let rightLever (a, b, c) = (bump a, bump b, c)
+
+// ---- display functions ----
 let showRef (a, b, c) = sprintf "st%d%d%d" a b c
 
 let showDef (a, b, c) =
   sprintf "state \"%d\\n%d\\n%d\" as %s" a b c (showRef (a, b, c))
-
-let leftLever (a, b, c) = (a, bump b, bump c)
-let rightLever (a, b, c) = (bump a, bump b, c)
 
 let showLever (lever: Lever) label (st: State) =
   let a = st |> showRef
@@ -26,6 +25,10 @@ let showLever (lever: Lever) label (st: State) =
 
 let showLeftLever = showLever leftLever "left"
 let showRightLever = showLever rightLever "right"
+
+// ---- data ---
+let start = (3, 3, 3)
+let goal = (2, 2, 1)
 
 let allStates =
   seq {
