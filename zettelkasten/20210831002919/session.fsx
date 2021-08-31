@@ -1,5 +1,7 @@
-// tag::types[]
+// tag::state[]
 type State = (int * int * int)
+// end::state[]
+// tag::levers[]
 type Lever = State -> State
 
 let bump n =
@@ -11,46 +13,47 @@ let bump n =
 
 let leftLever (a, b, c) = (a, bump b, bump c)
 let rightLever (a, b, c) = (bump a, bump b, c)
-// end::types[]
+// end::levers[]
 
-// tag::display[]
-let showRef (a, b, c) = sprintf "st%d%d%d" a b c
+let showState (a, b, c) = sprintf "%d%d%d" a b c
 
-let showDef (a, b, c) =
-  sprintf "state \"%d\\n%d\\n%d\" as %s" a b c (showRef (a, b, c))
+let showTransition label a b =
+  sprintf "%s --> %s: %s" (showState a) (showState b) label
 
-let showLever (lever: Lever) label (st: State) =
-  let a = st |> showRef
-  let b = st |> lever |> showRef
-  sprintf "%s --> %s : %s" a b label
+let diagram start goal =
+  let rec loop acc vis curr =
 
-let showLeftLever = showLever leftLever "left"
-let showRightLever = showLever rightLever "right"
-// end::display[]
+    if curr = goal then
+      acc
+    elif List.contains curr vis then
+      acc
+    else
+      let vis = curr :: vis
+      let left = leftLever curr
+      let right = rightLever curr
+
+      let accL =
+        acc @ [ showTransition "left" curr left ]
+
+      let accR =
+        acc @ [ showTransition "right" curr right ]
+
+      loop accL vis left @ loop accR vis right
+
+  [ "@startuml"
+    "hide empty description"
+    "!theme plain"
+    sprintf "[*] --> %s" (showState start) ]
+  @ loop [] [] start
+    @ [ sprintf "%s --> [*]" (showState goal)
+        "@enduml" ]
+  |> List.except [| "" |]
+  |> List.distinct
+  |> String.concat "\n"
 
 // ---- data ---
 let start = (3, 3, 3)
 let goal = (2, 2, 1)
 
-let allStates =
-  seq {
-    for a in [ 1; 2; 3 ] do
-      for b in [ 1; 2; 3 ] do
-        for c in [ 1; 2; 3 ] do
-          yield (a, b, c)
-  }
-  |> Seq.toList
-
 // ---- print it! ---
-let diagram =
-  [ "@startuml" ]
-  @ [ sprintf "[*] --> %s" (showRef start) ]
-    // @ (List.map showDef allStates)
-    @ (List.map showLeftLever allStates)
-      @ (List.map showRightLever allStates)
-        @ [ sprintf "%s --> [*]" (showRef goal) ]
-          @ [ "@enduml" ]
-
-let diagram' = String.concat "\n" diagram
-
-printf "%s" diagram'
+printfn "%s" (diagram start goal)

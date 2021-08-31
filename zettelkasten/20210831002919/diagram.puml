@@ -1,58 +1,24 @@
 @startuml
-[*] --> st333
-st111 --> st122 : left
-st112 --> st123 : left
-st113 --> st121 : left
-st121 --> st132 : left
-st122 --> st133 : left
-st123 --> st131 : left
-st131 --> st112 : left
-st132 --> st113 : left
-st133 --> st111 : left
-st211 --> st222 : left
-st212 --> st223 : left
-st213 --> st221 : left
-st221 --> st232 : left
-st222 --> st233 : left
-st223 --> st231 : left
-st231 --> st212 : left
-st232 --> st213 : left
-st233 --> st211 : left
-st311 --> st322 : left
-st312 --> st323 : left
-st313 --> st321 : left
-st321 --> st332 : left
-st322 --> st333 : left
-st323 --> st331 : left
-st331 --> st312 : left
-st332 --> st313 : left
-st333 --> st311 : left
-st111 --> st221 : right
-st112 --> st222 : right
-st113 --> st223 : right
-st121 --> st231 : right
-st122 --> st232 : right
-st123 --> st233 : right
-st131 --> st211 : right
-st132 --> st212 : right
-st133 --> st213 : right
-st211 --> st321 : right
-st212 --> st322 : right
-st213 --> st323 : right
-st221 --> st331 : right
-st222 --> st332 : right
-st223 --> st333 : right
-st231 --> st311 : right
-st232 --> st312 : right
-st233 --> st313 : right
-st311 --> st121 : right
-st312 --> st122 : right
-st313 --> st123 : right
-st321 --> st131 : right
-st322 --> st132 : right
-st323 --> st133 : right
-st331 --> st111 : right
-st332 --> st112 : right
-st333 --> st113 : right
-st221 --> [*]
+hide empty description
+!theme plain
+[*] --> 333
+333 --> 311: left
+311 --> 322: left
+322 --> 333: left
+322 --> 132: right
+132 --> 113: left
+113 --> 121: left
+121 --> 132: left
+121 --> 231: right
+231 --> 212: left
+212 --> 223: left
+223 --> 231: left
+223 --> 333: right
+212 --> 322: right
+231 --> 311: right
+113 --> 223: right
+132 --> 212: right
+311 --> 121: right
+333 --> 113: right
+221 --> [*]
 @enduml
