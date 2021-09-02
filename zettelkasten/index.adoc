@@ -1,6 +1,7 @@
 = Register
 
 .Entrypoints
-* xref:daily[]
-* xref:meetings[]
-* xref:misc[]
+* xref:./daily/[]
+* xref:./meetings/[]
+* xref:./misc/[]
+

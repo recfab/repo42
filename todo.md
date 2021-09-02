@@ -2,15 +2,15 @@
 
 ## Misc. Tasks
 
-- TODO Rollover Milliman 401(k)
-- TODO 🔎 Fair Phone
-- TODO Hypothesis Driven Development
-- TODO Shell Reference
-- TODO 🎨 Portfolio for Mino's art
-- TODO Create diagrams from a live system
+- [ ] Rollover Milliman 401(k)
+- [ ] 🔎 Fair Phone
+- [ ] 🔎 Hypothesis Driven Development
+- [ ] Shell Reference
+- [ ] 🎨 Portfolio for Mino's art
+- [ ] Create diagrams from a live system
 
 ## Reading List 📚
 
-- TODO Easy Rust
-- TODO PureScript Book
-- TODO Rust Book
+- [ ] Easy Rust
+- [ ] PureScript Book
+- [ ] Rust Book
