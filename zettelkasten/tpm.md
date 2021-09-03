@@ -1,4 +1,4 @@
-# TPM (Trusted Platform Module)
+# Trusted Platform Module (TPM)
 
 #computerphile
 
