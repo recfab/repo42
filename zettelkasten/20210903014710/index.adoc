@@ -1,6 +1,7 @@
 = Myst Remake: Clock Tower Puzzle
 :source-highlighter: highlight.js
 :highlightjs-languages: fsharp
+:id: 20210903014710
 
 There is a clock tower on the South side of the island. Inside is a puzzle with gears and levers.
 The goal is to pull the levers in the right order to get the gears into the correct state.

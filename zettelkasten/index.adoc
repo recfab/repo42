@@ -1,7 +1,0 @@
-= Register
-
-.Entrypoints
-* xref:./daily/[]
-* xref:./meetings/[]
-* xref:./misc/[]
-
