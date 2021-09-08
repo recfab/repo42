@@ -1,0 +1,14 @@
+= Meeting: Deep Dive into Architectural Templates
+Gwen Buchthal, 2021-04-21 @ 10:00:00
+:id: 20210908155929
+
+* Things that have bubbled up for Gwen as a new hire
+* Templating
+* Serverless vs Containerization
+* Templates
+** => Consistency => Simplicity
+** portability (people move teams)
+** interfaces
+** rapid service creation
+* Lots of AWS resources created programatically that don't get cleaned up.
+** Should be converted to CloufFormation Stack or Terraform state file
