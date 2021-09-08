@@ -54,7 +54,8 @@
     "WLTR",
     "WotC",
     "Xacto",
-    "Yael"
+    "Yael",
+    "Zettlekasten"
   ],
   "ignorePaths": [
     "*.lock",
