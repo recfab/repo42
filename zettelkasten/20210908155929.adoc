@@ -11,4 +11,4 @@ Gwen Buchthal, 2021-04-21 @ 10:00:00
 ** interfaces
 ** rapid service creation
 * Lots of AWS resources created programatically that don't get cleaned up.
-** Should be converted to CloufFormation Stack or Terraform state file
+** Should be converted to CloudFormation Stack or Terraform state file
