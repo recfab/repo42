@@ -1,0 +1,17 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+bin_dir=$(dirname "$0")
+
+id=$(date "+%Y%m%d%H%M%S")
+
+file="$bin_dir/../notes/$id.md"
+
+cat << EOF > "$file"
+# $@
+
+## References
+EOF
+
+$EDITOR "$file"

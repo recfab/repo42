@@ -1,0 +1,27 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+bin_dir=$(dirname "$0")
+
+id=$(date '+%Y-%m-%d')
+
+file="$bin_dir/../notes/daily/$id.md"
+
+if [[ ! -f "$file" ]]; then
+  cat << EOF > "$file"
+# $id Daily
+
+## Tasks
+
+## Meetings
+
+* 10:15 Standup
+
+## Misc. Tidbits
+
+## References
+EOF
+fi
+
+$EDITOR "$file"
