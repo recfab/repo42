@@ -1,19 +1,24 @@
 #!/bin/bash
 set -euo pipefail
-IFS=$'\n\t'
+# IFS=$'\n\t'
 
 bin_dir=$(dirname "$0")
 
 id=$(date "+%Y%m%d%H%M%S")
+title="$*"
 
-file="$bin_dir/../notes/$id.md"
+file=$(realpath "$bin_dir/../notes/$id.md")
 
 cat << EOF > "$file"
-# $@
+# $title
 
 * [ ] fill out this note
 
 ## References
 EOF
 
-$EDITOR "$file"
+link="[$title]($id.md)"
+echo "New note: $file"
+echo "Link:     $link"
+
+echo "$link" | pbcopy
