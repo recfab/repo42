@@ -11,6 +11,8 @@ file="$bin_dir/../notes/$id.md"
 cat << EOF > "$file"
 # $@
 
+* [ ] fill out this note
+
 ## References
 EOF
 
