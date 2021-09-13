@@ -4,10 +4,16 @@ set -euo pipefail
 
 bin_dir=$(dirname "$0")
 
-id=$(date "+%Y%m%d%H%M%S")
+id="$1"
+shift
 title="$*"
 
 file=$(realpath "$bin_dir/../notes/$id.md")
+
+if [[ -f "$file" ]]; then
+  echo "failure: file already exists"
+  exit 1
+fi
 
 cat << EOF > "$file"
 # $title
@@ -17,7 +23,7 @@ cat << EOF > "$file"
 ## References
 EOF
 
-link="[$title]($id.md)"
+link="[[$id]]"
 echo "New note: $file"
 echo "Link:     $link"
 
