@@ -4,11 +4,17 @@
 open System
 open System.IO
 open System.Linq
+open System.Text
 open Markdig
 open Markdig.Extensions.Yaml
 open Markdig.Syntax
 open YamlDotNet.Serialization
 open YamlDotNet.Serialization.NamingConventions
+
+let newId () =
+  DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
+  |> BitConverter.GetBytes
+  |> Convert.ToHexString
 
 let listFiles dir = Directory.EnumerateFiles(dir, "*.md")
 
@@ -31,10 +37,6 @@ let pipeline =
   MarkdownPipelineBuilder()
     .UseYamlFrontMatter()
     .Build()
-
-let zettleIdPrefix () =
-  let d = DateTime.UtcNow
-  d.ToString("yyyyMMddhhmm")
 
 let deserializer =
   DeserializerBuilder()
