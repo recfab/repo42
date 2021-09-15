@@ -10,10 +10,10 @@ id: 20210903022022
 - [ ] 🔎 Hypothesis Driven Development
 - [ ] Shell Reference
 - [ ] 🎨 Portfolio for Mino's art
-- [ ] Create diagrams from a live system
+- [ ] 💡 Create diagrams from a live system
 
 ## Reading List 📚
 
-- [ ] Easy Rust
-- [ ] PureScript Book
-- [ ] Rust Book
+- [ ] 📚 Easy Rust
+- [ ] 📚 PureScript Book
+- [ ] 📚 Rust Book
