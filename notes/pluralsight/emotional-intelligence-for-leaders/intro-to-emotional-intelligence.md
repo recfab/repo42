@@ -1,6 +1,6 @@
 # Pluralsight Course: Introduction to Emotional Intelligence
 
-Part of [[pluralsight.paths.emotional-intelligence-for-leaders]]
+Part of [[index]]
 
 * requirements
   * open mind

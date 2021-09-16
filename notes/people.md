@@ -2,6 +2,6 @@
 
 ## Ian Cooper
 
-* [[talks.ian-cooper.escaping-dist-monolith]]
+* [[escaping-dist-monolith]]
 
 ## References

@@ -11,4 +11,4 @@
 ## References
 
 * _b. Shabbat 31a_ on [Sefaria](https://www.sefaria.org/Shabbat.31a.6?lang=bi&with=all&lang2=en)
-* [[talmud_bavli]]
+* [[talmud-bavli]]
