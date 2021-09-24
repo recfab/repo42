@@ -12,9 +12,11 @@ open YamlDotNet.Serialization
 open YamlDotNet.Serialization.NamingConventions
 
 let newId () =
-  DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
-  |> BitConverter.GetBytes
-  |> Convert.ToHexString
+  Path.GetRandomFileName()
+  |> Path.GetFileNameWithoutExtension
+
+// 36^8 =  36 ^ 8 = 2.82110990746e+12
+// 2,821,109,907,460
 
 let listFiles dir = Directory.EnumerateFiles(dir, "*.md")
 
@@ -30,7 +32,7 @@ let extractFrontMatter (pipeline: MarkdownPipeline) file =
 
   fm
 
-let files = listFiles "kb"
+// let files = listFiles "notes"
 
 
 let pipeline =
@@ -42,5 +44,3 @@ let deserializer =
   DeserializerBuilder()
     .WithNamingConvention(CamelCaseNamingConvention.Instance)
     .Build()
-
-let metadata: dynamic = deserializer.Deserialize(fm)
