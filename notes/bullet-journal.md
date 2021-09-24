@@ -1,10 +1,6 @@
----
-id: 20210903015829
-date: 2018-02-25
----
 # Bullet Journal
 
-== What I use
+## What I use
 
 * Leuchtturm 1917 Notebook A5 Hardcover Dotted http://a.co/2vKiMpw
 * Micron pens http://a.co/byL4Yl8
@@ -23,7 +19,7 @@ date: 2018-02-25
 * Xacto knife:  http://a.co/ag6t06R
 * Cutting mat: http://a.co/6AkiIDo
 
-== What I tried
+## What I tried
 
 These didn’t end up working for me.
 
@@ -33,10 +29,10 @@ These didn’t end up working for me.
 * Northbooks 5x8 notebook:  http://a.co/5ZrCmux (I tried this because it was cheap, and hooboy is it. Also they sent me line grid instead of dot grid…)
 * Sakura Calligraphy pens: http://a.co/1D6iKW4 - these are nice, but being chisel tipped means you can't get varied lines weights.
 
-== Show & Tell
+## Show & Tell
 
-* link:http://bulletjournal.com/show-tell/[Show & Tell 1]
-* link:http://bulletjournal.com/show-tell-2/[Show & Tell 2]
-* link:http://bulletjournal.com/show-tell-3/[Show & Tell 3]
-* link:http://bulletjournal.com/show-tell-4/[Show & Tell 4]
-* link:http://bulletjournal.com/show-tell-5/[Show & Tell 5]
+* [Show & Tell 1](http://bulletjournal.com/show-tell/)
+* [Show & Tell 2](http://bulletjournal.com/show-tell-2/)
+* [Show & Tell 3](http://bulletjournal.com/show-tell-3/)
+* [Show & Tell 4](http://bulletjournal.com/show-tell-4/)
+* [Show & Tell 5](http://bulletjournal.com/show-tell-5/)

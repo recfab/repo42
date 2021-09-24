@@ -1,14 +1,9 @@
----
-<!-- cspell:disable -->
-id: 20210903021009
-date: 2018-02-25
----
 # Jewish Stuff
 
 ## 2002-11-08
 
-חלול השם (chilul hashem):: Desecration of the Name
-להבדיל (l'havdil):: Mutatis mutandi
+חלול השם (chilul hashem) -  Desecration of the Name
+להבדיל (l'havdil) -  Mutatis mutandi
 
 ### Books
 
@@ -24,11 +19,8 @@ Encyclopedia Judaica: Takana (article) - How Jewish/Rabbinic Law has changed ove
 
 כסף משנה - book puts proof texts back into Rambam
 
-סוף פסוק (sof pasuk)
-: end of cutting
+סוף פסוק (sof pasuk) : end of cutting
 
-פוסק דין (posek din)
-: cutter of the law (e.g. Rambam)
+פוסק דין (posek din) : cutter of the law (e.g. Rambam)
 
-בלי נדר (bli neder)
-: without a vow
+בלי נדר (bli neder) : without a vow
