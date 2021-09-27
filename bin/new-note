@@ -8,7 +8,7 @@ id="$1"
 shift
 title="$*"
 
-file=$(realpath "$bin_dir/../notes/$id.md")
+file=$(realpath "$bin_dir/../notes/$id.adoc")
 
 if [[ -f "$file" ]]; then
   echo "failure: file already exists"
@@ -16,11 +16,10 @@ if [[ -f "$file" ]]; then
 fi
 
 cat << EOF > "$file"
-# $title
+= $title
 
 * [ ] fill out this note
 
-## References
 EOF
 
 link="[[$id]]"
