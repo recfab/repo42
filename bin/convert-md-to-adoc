@@ -1,0 +1,21 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+function rollback() {
+  git restore --staged notes
+  git checkout notes
+  git clean -f notes
+}
+
+trap rollback ERR
+
+for f in $(git ls-files 'notes/*.md'); do
+  echo -e "\033[2mConverting $f\033[0m"
+  converted=${f/%.md/.adoc}
+
+  kramdoc --wrap=ventilate -o "$converted" "$f"
+
+  git rm "$f"
+  git add "$converted"
+done

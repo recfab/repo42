@@ -1,0 +1,14 @@
+= Bash Strict Mode
+
+== TL;DR
+
+[,bash]
+----
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+----
+
+== References
+
+* http://redsymbol.net/articles/unofficial-bash-strict-mode/[Original Article]

@@ -1,9 +1,0 @@
-# Pluralsight Path: Emotional Intelligence for Leaders
-
-## Courses in this path
-
-* [[intro-to-emotional-intelligence]]
-* [[self-assess-emotional-intelligence]]
-* [[leading-with-emotional-intelligence]]
-
-## References

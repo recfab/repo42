@@ -1,0 +1,20 @@
+= 2021-09-14 Daily
+
+== Tasks
+
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked">++++++</input>+++document plan to cleanup Kubernetes
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked">++++++</input>+++document plan to cleanup GitLab environments
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled">++++++</input>+++migrate dropbox \-> one note
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked">++++++</input>+++!!!
+Pay Trupanion
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked">++++++</input>+++!!!
+Pay T-Mobile
+
+== Meetings
+
+* 10:15 Standup
+* 3:00 Platform All-hands
+
+== Misc. Tidbits
+
+== References

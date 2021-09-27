@@ -1,0 +1,14 @@
+= F# Pattern Matching
+
+== Active Patterns
+
+* basically, dynamic patterns
+
+____
+guards are great for one-off matches.
+But if there are certain guards that you use over and over, consider using active patterns instead.
+____
+
+== References
+
+* https://fsharpforfunandprofit.com/posts/match-expression[fsharpforfunandprofit - match expressions]

@@ -1,0 +1,25 @@
+= 2021-09-15 Daily
+
+== Tasks
+
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled">++++++</input>+++Learn Julia
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled">++++++</input>+++Read the https://en.wikipedia.org/wiki/Expression_problem[Expression Problem]
+
+== Meetings
+
+* 11:00 DGS Q&A
+
+== Misc. Tidbits
+
+* Talk: https://www.youtube.com/watch?v=kc9HwsxE1OY[The Unreasonable Effectiveness of Multiple Dispatch]
+ ** JuliaCon Baltimore 2019
+ ** multiple dispatch \=> runtime types
+ ** function overloading \=> compile time types
+ ** {blank}
++
+____
+multiple dispatch is what actually does the correct thing;
+everything else is a poor approximation"
+____
+
+== References

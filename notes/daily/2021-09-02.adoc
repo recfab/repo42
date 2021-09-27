@@ -1,0 +1,37 @@
+= 2021-09-02 Daily
+
+== Tasks
+
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled">++++++</input>+++Read about https://fortelabs.co/blog/para/[PARA]
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled">++++++</input>+++Fill out Jira ticket for which things need to be deleted https://wotc.atlassian.net/browse/CIC-62
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked">++++++</input>+++Ask Ernie about Dropbox access
+ ** [>] if no good \=> migrate dropbox \-> one note
+* [c] make a template system using `envsubst`
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled">++++++</input>+++transcribe bullet journals
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled">++++++</input>+++extract SQR3 section to a zettel
+
+== Meetings
+
+* 10:30 Standup
+* 11:30 Cluster migration, testing, training and more
+* 13:30 Next steps (CI/CD)
+
+== Misc. Tidbits
+
+* https://www.youtube.com/watch?v=JNJJEFzaOiA
+ ** SQR3
+  *** Survey
+  *** Question
+  *** Rephrase aka TeachBack or Feynman Method
+  *** Recall
+   **** Flashcards \=> active recall
+  *** Repitition
+   **** spaced repitition
+ ** self study
+  *** clear goals - remove anxiety about what's next
+ ** Cornell method
+ ** outline method
+
+== References
+
+* xref:2021-09-01.adoc[Yesterday]
