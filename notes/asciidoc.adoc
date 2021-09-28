@@ -1,0 +1,16 @@
+= Asciidoc
+
+== Types of blocks <<adwg>>
+
+`////`:: comment
+`....`:: literal
+`----`:: listing, source
+`====`:: example
+`____`:: quote, verse
+`****`:: sidebar
+`++++`:: pass thru
+
+[bibliography]
+== References
+
+* [[[adwg]]] https://asciidoctor.org/docs/asciidoc-writers-guide/#delimited-blocks[Delimited Blocks documentation]
