@@ -5,7 +5,4 @@
   "todo-tree.filtering.ignoreGitSubmodules": true,
   "todo-tree.filtering.includeHiddenFiles": true,
   "todo-tree.filtering.useBuiltInExcludes": "search excludes",
-  "foam.decorations.links.enable": true,
-  "foam.dateSnippets.afterCompletion": "navigateToNote",
-  "asciidoc.preview.openAsciiDocLinks": "inEditor",
 }
