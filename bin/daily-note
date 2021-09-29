@@ -6,21 +6,21 @@ bin_dir=$(dirname "$0")
 
 id=$(date '+%Y-%m-%d')
 
-file="$bin_dir/../notes/daily/$id.md"
+file="$bin_dir/../notes/daily/$id.adoc"
 
 if [[ ! -f "$file" ]]; then
   cat << EOF > "$file"
-# $id Daily
+= $id Daily
 
-## Tasks
+== Tasks
 
-## Meetings
+== Meetings
 
 * 10:15 Standup
 
-## Misc. Tidbits
+== Misc. Tidbits
 
-## References
+== References
 EOF
 fi
 
