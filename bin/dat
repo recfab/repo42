@@ -1,0 +1,10 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+this_dir=$(dirname "$0")
+root_dir=$(realpath "$this_dir/..")
+
+bin_dir="$root_dir/DeepThought/src/bin/Debug/net5.0/"
+
+dotnet "$bin_dir/DeepThought.dll" -- $*
