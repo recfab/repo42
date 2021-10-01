@@ -46,7 +46,7 @@ in prod, would use multiple highly available etcd
 
 "Node", or worker node, or in the old terminology, "Minions"
 
-* kublet - agent running on each node
+* kubelet - agent running on each node
 * k-proxy - a network proxy
 * a container runtime, e.g.
 docker

@@ -14,7 +14,7 @@
 * Solutions
  ** use proxy for availability
   *** proxy can handle retries, circuit breaker, etc.
-  *** "service message" is essentially a Corba requet broker with a new name
+  *** "service message" is essentially a CORBA request broker with a new name
 * "Smart endpoints and dumb pipes"
  ** a _reliable_ distributed monolith is still a distributed monolith
 * Consistent or Available: have to choose 1

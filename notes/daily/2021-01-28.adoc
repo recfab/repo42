@@ -1,3 +1,4 @@
+// cspell:ignore orgs
 = 2021-01-28 Daily
 :date: 2021-01-28T10:00AM
 :id: 20210903015119

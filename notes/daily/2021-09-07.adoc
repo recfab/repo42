@@ -1,3 +1,4 @@
+// cspell:ignore learnyouahaskell
 = 2021-09-07 Daily
 
 == Tasks

@@ -5,10 +5,12 @@
 lint:
   commands:
     cspell:
-      run: cspell lint --no-progress "**/*"
+      run: cspell lint --no-progress {all_files}
     shellcheck:
       glob: "*/*.sh"
       run: shellcheck {all_files}
+    terraform-validator:
+      run: terraform-validator .
 
 format:
   commands:

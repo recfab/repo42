@@ -1,8 +1,8 @@
-= Video: Djikstra's Algorithm
+= Video: Dijkstra Algorithm
 :id: 20210903020541
 
 #computerphile
 
-* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled">++++++</input>+++Research Djikstra's Algorithm
+* +++<input type="checkbox" class="task-list-item-checkbox" disabled="disabled">++++++</input>+++Research Dijkstra's Algorithm
 
 image::https://img.youtube.com/vi/GazC3A4OQTE/0.jpg[Watch on YouTube,link=https://www.youtube.com/watch?v=GazC3A4OQTE]

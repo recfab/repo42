@@ -1,4 +1,6 @@
+// cspell:disable
 = Jewish Stuff
+
 
 == 2002-11-08
 
