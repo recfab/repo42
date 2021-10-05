@@ -1,4 +1,5 @@
 = F# Pattern Matching
+:bibtex-style: ieee
 
 == Active Patterns
 
@@ -8,7 +9,8 @@ ____
 guards are great for one-off matches.
 But if there are certain guards that you use over and over, consider using active patterns instead.
 ____
+-- Scott Wlashin cite:[Wlashin2012a]
 
 == References
 
-* https://fsharpforfunandprofit.com/posts/match-expression[fsharpforfunandprofit - match expressions]
+bibliography::[]
