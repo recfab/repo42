@@ -3,8 +3,8 @@ set -euo pipefail
 IFS=$'\n\t'
 
 this_dir=$(dirname "$0")
-root_dir=$(realpath "$this_dir/..")
+project_dir=$(realpath "$this_dir/../DeepThought/src")
 
-bin_dir="$root_dir/DeepThought/src/bin/Debug/net5.0/"
+dotnet build "$project_dir"
 
-dotnet "$bin_dir/DeepThought.dll" -- $*
+dotnet run --project "$project_dir" -- $*
