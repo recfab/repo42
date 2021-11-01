@@ -34,6 +34,7 @@
   ],
   "words": [
     "Agda",
+    "Argu",
     "Bavli",
     "Buchthal",
     "Chizkiyah",
@@ -61,6 +62,7 @@
     "Minikube",
     "Misattribution",
     "MSCEIT",
+    "NACL",
     "Namen",
     "Naveen",
     "NGINX",
@@ -76,6 +78,7 @@
     "puml",
     "pushd",
     "recfab",
+    "Résumé",
     "Robie",
     "rubocop",
     "Sai",
@@ -90,6 +93,7 @@
     "Verinder",
     "VMWare",
     "Washi",
+    "Wlashin",
     "WLTR",
     "WotC",
     "Xacto",
@@ -104,6 +108,8 @@
     "*.lock",
     "*.svg",
     ".gitignore",
-    "target"
+    "target",
+    "*.fsproj",
+    "*.tfplan"
   ]
 }

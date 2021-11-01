@@ -3,8 +3,7 @@
 open Argu
 open System
 
-type Args =
-  | Ls
+type Args = | Ls
   | NewNote
   interface IArgParserTemplate with
     member this.Usage =

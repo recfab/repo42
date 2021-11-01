@@ -20,6 +20,6 @@
 * be smart about splunk usage (usage = $$)
 * impersonate another user
 * date handling in UTC
- ** feasability study, high impact to current data
+ ** feasibility study, high impact to current data
 * WER-SE some orgs cannot schedule side events because cannot see sched.
 parent events
