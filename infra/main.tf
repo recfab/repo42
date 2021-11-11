@@ -1,37 +1,27 @@
-terraform {
-  backend "http" {}
-
-  required_providers {
-    digitalocean = {
-      source  = "digitalocean/digitalocean"
-      version = "2.10.1"
-    }
-  }
+data "digitalocean_kubernetes_versions" "this" {
+  version_prefix = "1.21."
 }
 
-provider "digitalocean" {
-  #   token read from envvar DIGITALOCEAN_TOKEN
-  #   token = var.do_token
+resource "digitalocean_tag" "environment" {
+  name = "env:${var.environment}"
 }
 
-data "digitalocean_kubernetes_versions" "main" {
-  version_prefix = "1.18."
-}
-
-resource "digitalocean_kubernetes_cluster" "development" {
-  name         = "recfab-development"
+resource "digitalocean_kubernetes_cluster" "this" {
+  name         = "${var.environment}-${var.region}-cluster"
   auto_upgrade = true
-  region       = "sfo3"
-  version      = data.digitalocean_kubernetes_versions.main.latest_version
+  region       = var.region
+  version      = data.digitalocean_kubernetes_versions.this.latest_version
 
   node_pool {
     # cspell:disable
-    name = "pool-kd4zwylv8"
+    name = "default"
     size = "s-1vcpu-2gb"
     # cspell:enable
 
     node_count = 1
   }
 
-  tags = ["development"]
+  tags = [
+    digitalocean_tag.environment.id
+  ]
 }

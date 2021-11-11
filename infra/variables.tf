@@ -1,6 +1,9 @@
-# variable "do_token" {
-#   type      = string
-#   sensitive = true
+variable "environment" {
+  type        = string
+  description = "Name of the environment"
+}
 
-#   description = "Digital Ocean API Token"
-# }
+variable "region" {
+  type        = string
+  description = "Which region to create resources in"
+}
