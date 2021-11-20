@@ -2,15 +2,12 @@
 # Refer for explanation to following link:
 # https://github.com/Arkweid/lefthook/blob/master/docs/full_guide.md
 #
-lint:
+pre-commit:
   commands:
-    cspell:
+    check-spelling:
       run: cspell lint --relative --no-progress {all_files}
-    shellcheck:
+    lint-shell:
       glob: "*/*.sh"
       run: shellcheck {all_files}
-
-format:
-  commands:
-    cspell-json:
+    format-cspell-json:
       run: jq -f fmt-cspell-json.jq cspell.json | sponge cspell.json

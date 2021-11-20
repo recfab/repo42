@@ -78,9 +78,9 @@
     "puml",
     "pushd",
     "recfab",
-    "Résumé",
     "Robie",
     "rubocop",
+    "Résumé",
     "Sai",
     "Sai's",
     "Sakura",
@@ -105,11 +105,11 @@
   "ignorePaths": [
     "**/net5.0",
     "**/obj/",
+    "*.fsproj",
     "*.lock",
     "*.svg",
+    "*.tfplan",
     ".gitignore",
-    "target",
-    "*.fsproj",
-    "*.tfplan"
+    "target"
   ]
 }
