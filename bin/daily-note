@@ -24,4 +24,4 @@ if [[ ! -f "$file" ]]; then
 EOF
 fi
 
-$EDITOR "$file"
+eval "$EDITOR $file"
