@@ -1,6 +1,7 @@
-= Argo CD
+# Argo CD
 
-.Components
+## Components
+
 * API Server
 * Repository Server
 * Application controller

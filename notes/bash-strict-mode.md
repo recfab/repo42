@@ -1,14 +1,13 @@
-= Bash Strict Mode
+# Bash Strict Mode
 
-== TL;DR
+## TL;DR
 
-[,bash]
-----
+```bash
 #!/bin/bash
 set -euo pipefail
 IFS=$'\n\t'
-----
+```
 
-== References
+## References
 
 * http://redsymbol.net/articles/unofficial-bash-strict-mode/[Original Article]

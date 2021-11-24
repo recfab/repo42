@@ -1,6 +1,0 @@
-= Apartment Hunting
-:id: 20210903022114
-
-== Requirements
-
-* First floor and/or elevator
