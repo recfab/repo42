@@ -1,8 +1,12 @@
+---
+modified: 2021-11-25T17:48:57-08:00
+---
+
 # Apartment Hunting
 
 ## Things to consider
 
-* First floor and/or elevator
+* First floor and/or elevator (avoid stairs)
 * Is there an incinerator?
 * How far is it to the dumpster
 * how quick can I get home?
