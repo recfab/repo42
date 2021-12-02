@@ -10,7 +10,7 @@ function rollback() {
 
 trap rollback ERR
 
-for f in $(git ls-files 'notes/**/*.adoc'); do
+for f in $(git ls-files '**/*.adoc'); do
   echo -e "\033[2mConverting $f\033[0m"
   converted=${f/%.adoc/.md}
 
