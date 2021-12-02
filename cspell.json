@@ -1,7 +1,7 @@
 {
   "version": "0.2",
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/master/cspell.schema.json",
-  "language": "en",
+  "language": "en_US",
   "dictionaries": [
     "bash",
     "csharp",
@@ -80,9 +80,9 @@
     "puml",
     "pushd",
     "recfab",
-    "Résumé",
     "Robie",
     "rubocop",
+    "Résumé",
     "Sai",
     "Sai's",
     "Sakura",
