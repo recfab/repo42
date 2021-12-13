@@ -4,11 +4,11 @@ set -euo pipefail
 
 bin_dir=$(dirname "$0")
 
-id="$1"
-shift
+id="$(date '+%Y%m%d%H%M%S')"
+timestamp=$(date '+%Y-%m-%dT%T%z')
 title="$*"
 
-file=$(realpath "$bin_dir/../notes/$id.adoc")
+file=$(realpath "$bin_dir/../pkm/drafts/$id.md")
 
 if [[ -f "$file" ]]; then
   echo "failure: file already exists"
@@ -16,9 +16,13 @@ if [[ -f "$file" ]]; then
 fi
 
 cat << EOF > "$file"
-= $title
+---
+created: $timestamp
+modified: $timestamp
+---
+# $title
 
-* [ ] fill out this note
+* TODO fill out this note
 
 EOF
 

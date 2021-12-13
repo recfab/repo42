@@ -5,22 +5,27 @@ IFS=$'\n\t'
 bin_dir=$(dirname "$0")
 
 id=$(date '+%Y-%m-%d')
+timestamp=$(date '+%Y-%m-%dT%T%z')
 
-file="$bin_dir/../notes/daily/$id.adoc"
+file="$bin_dir/../pkm/journal/$id.md"
 
 if [[ ! -f "$file" ]]; then
   cat << EOF > "$file"
-= $id Daily
+---
+type: Journal
+created: $timestamp
+modified: $timestamp
+---
+# $id Daily
 
-== Tasks
+## Tasks
 
-== Meetings
+## Meetings
 
 * 10:15 Standup
 
-== Misc. Tidbits
+## Misc. Tidbits
 
-== References
 EOF
 fi
 
