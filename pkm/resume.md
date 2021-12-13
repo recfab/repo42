@@ -1,14 +1,12 @@
-= Résumé
+# Résumé
 
 Yael Namen :dotnet: image:dotnet.png[.NET] :jquery: image:jquery.png[jQuery] :mssql: image:sqlserver.png[Microsoft SQL Server] :p4: image:p4.png[Perforce] :toc:
 
-== Work History
+## Work History
 
-// [[wotc]]
+### Wizards of the Coast
 
-=== Wizards of the Coast
-
-May 2013 \-> Present
+May 2013 -> Present
 
 ////
 |===
@@ -16,10 +14,10 @@ May 2013 \-> Present
 |===
 ////
 
-_Senior Software Developer_
+#### Senior Software Developer
 
 * Utilized Amazon Simple Queue Service to allow migration from legacy systems to new systems.
-This involved modifying legacy systems to send messages, as well as an orchestration service to consume those messages and shuttle them to the appropriate microservice.
+  This involved modifying legacy systems to send messages, as well as an orchestration service to consume those messages and shuttle them to the appropriate microservice.
 * Later, rewrote this ETL system using Database-to-Database calls in order to improve speed, reduce data discrepancies between the legacy and new systems, as well as remove our reliance on the legacy services that sit on top of the legacy database.
 * Developer on the new Store & Event Locator, a Vue.js front end application supported by microservices
 * Various microservices related Organized Play, written primarily in dotnet core, as well as Node.js, and hosted in a Kubernetes cluster.
@@ -31,31 +29,29 @@ This involved modifying legacy systems to send messages, as well as an orchestra
 * Developed and consumed WCF based web services
 * Worked on several internal tools written in WPF
 
-[[mcg]]
-
-=== MCG Health, LLC (formerly _Milliman Care Guidelines_)
+### MCG Health, LLC (formerly _Milliman Care Guidelines_)
 
 October 2011 \-> May 2013
 // |===
 // | Subversion | {vs} | SQL Server |Oracle |PowerShell
 // |===
 
-_Software Development Engineer_
+#### Software Development Engineer
 
 * Worked on the development team of the flagship product, including as the sole developer for a customer preview site of new functionality
 * Utilized Agile / Scrum style development practices in a small team, supported by a White Board and TFS for work item tracking, and TFS for source control.
-Prior to transitioning to TFS, we used Subversion for source control.
+  Prior to transitioning to TFS, we used Subversion for source control.
 * Developed Sql Server and Oracle versions of the database, in both clean and upgrade installation scenarios.
 * Developed a Powershell module to simplify our existing process of creating / upgrading the databases on dev boxes, and for switching between multiple environments.
 
-=== Ventyx, an ABB Company (formerly _Insert Key Solutions, Inc._)
+### Ventyx, an ABB Company (formerly _Insert Key Solutions, Inc._)
 
 November 2006 \-> October 2011
 // |===
 // |Visual Studio |SQL Server |Oracle
 // |===
 
-==== Software Developer / Analyst
+#### Software Developer / Analyst
 
 * Gathered and analyzed requirements from customers
 * Developed web applications in ASP.NET Web Forms
@@ -66,7 +62,7 @@ November 2006 \-> October 2011
 * Loaded legacy data from customer sources, typically Excel spreadsheets and Access databases
 * Development of integration procedures for communication between our applications and the customers' other systems
 
-=== Exelon Business Services Company
+### Exelon Business Services Company
 
 July 2006 \-> November 2006 (contract)
 
@@ -76,6 +72,6 @@ July 2006 \-> November 2006 (contract)
 |===
 ////
 
-==== SQL Query Analyzer
+#### SQL Query Analyzer
 
 * Analysed disparate, legacy data sources (typically Excel spreadsheets and Access databases), and loaded that data into a new, centralized database.

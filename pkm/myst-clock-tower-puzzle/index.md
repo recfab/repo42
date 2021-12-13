@@ -1,7 +1,4 @@
-= Myst Remake: Clock Tower Puzzle
-:source-highlighter: highlight.js
-:highlightjs-languages: fsharp
-:id: 20210903014710
+# Myst Remake: Clock Tower Puzzle
 
 There is a clock tower on the South side of the island. Inside is a puzzle with gears and levers.
 The goal is to pull the levers in the right order to get the gears into the correct state.
@@ -12,14 +9,14 @@ I had thought solve this with a state machine, using F#.
 +
 [source,fsharp]
 ----
-include::session.fsx[tags=state]
+include::session.fsx[tags#state]
 ----
 
 * 2 levers, each changing 2 of the 3 numbers
 +
 [source,fsharp]
 ----
-include::session.fsx[tags=levers]
+include::session.fsx[tags#levers]
 ----
 
 There is a `diagram` function, which generates a State Machine diagram
