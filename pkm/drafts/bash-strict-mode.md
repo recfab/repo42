@@ -10,4 +10,4 @@ IFS=$'\n\t'
 
 ## References
 
-* http://redsymbol.net/articles/unofficial-bash-strict-mode/[Original Article]
+* [Original Article](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
