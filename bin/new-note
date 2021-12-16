@@ -17,6 +17,7 @@ fi
 
 cat << EOF > "$file"
 ---
+id: $id
 created: $timestamp
 modified: $timestamp
 ---

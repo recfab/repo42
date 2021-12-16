@@ -12,6 +12,7 @@ file="$bin_dir/../pkm/journal/$id.md"
 if [[ ! -f "$file" ]]; then
   cat << EOF > "$file"
 ---
+id: $id
 type: Journal
 created: $timestamp
 modified: $timestamp
