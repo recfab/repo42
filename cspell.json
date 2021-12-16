@@ -123,6 +123,7 @@
     "*.svg",
     "*.tfplan",
     ".gitignore",
+    "extensions.json",
     "package-lock.json",
     "target"
   ]
