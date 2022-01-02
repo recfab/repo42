@@ -70,7 +70,7 @@ plugins=(
   git-auto-fetch
   git-extras
   kubectl
-  cargo
+  rust
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -104,24 +104,24 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source $(brew --prefix asdf)/asdf.sh
+# source $(brew --prefix asdf)/asdf.sh
 
-eval "$(asdf exec direnv hook zsh)"
-direnv() { asdf exec direnv "$@"; }
+# eval "$(asdf exec direnv hook zsh)"
+# direnv() { asdf exec direnv "$@"; }
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+# export JAVA_HOME=$(/usr/libexec/java_home)
 
 export PATH="/usr/local/opt/make/libexec/gnubin:/usr/local/opt/openssl/bin:$PATH"
 
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/nameny/.zshrc'
+zstyle :compinstall filename '/home/recfab/.zshrc'
 
 autoload -Uz compinit
 compinit
