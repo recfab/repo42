@@ -37,7 +37,7 @@ modified: 2021-12-16T15:22:26-0800
     - many datascience packages pre-installed e.g. `numpy`, `pandas`
 
 - example
-  - Sieve of Aristophanes [[20211216161646]]
+  - Sieve of Aristophanes [[Sieve of Aristophanes]]
 
 ## How it works
 

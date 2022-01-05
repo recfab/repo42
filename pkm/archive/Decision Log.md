@@ -13,4 +13,4 @@ Nothing is permanent--I can change my mind later--but by forcing myself to decid
 
 ## Decision list
 
-* Markup languages [[20211216132400]]
+* Markup languages [[Decision - Markdown vs. Asciidoc]]

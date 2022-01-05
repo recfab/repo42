@@ -1,4 +1,6 @@
-- is a [GitOps](20211216153840.md) tool
+# Argo CD
+
+- is a [[GitOps]] tool
 
 ## Components
 

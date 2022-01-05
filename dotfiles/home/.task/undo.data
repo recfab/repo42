@@ -482,8 +482,8 @@ old [description:"salesforce employee treatment" entry:"1621536575" modified:"16
 new [description:"salesforce employee treatment" entry:"1621536575" modified:"1622741343" reviewed:"1622741343" status:"pending" tags:"research" uuid:"517e5c23-2e80-4be7-a800-92285331d49b"]
 ---
 time 1622741348
-old [description:"filligree generator" entry:"1621536821" modified:"1621536821" status:"pending" tags:"toy" uuid:"f6a92f93-a465-42ab-8231-1430bd29068c"]
-new [description:"filligree generator" entry:"1621536821" modified:"1622741348" reviewed:"1622741348" status:"pending" tags:"toy" uuid:"f6a92f93-a465-42ab-8231-1430bd29068c"]
+old [description:"fillagree generator" entry:"1621536821" modified:"1621536821" status:"pending" tags:"toy" uuid:"f6a92f93-a465-42ab-8231-1430bd29068c"]
+new [description:"fillagree generator" entry:"1621536821" modified:"1622741348" reviewed:"1622741348" status:"pending" tags:"toy" uuid:"f6a92f93-a465-42ab-8231-1430bd29068c"]
 ---
 time 1622741352
 old [description:"TDD by Example by Kent Beck" entry:"1621371382" modified:"1621974660" start:"1621974660" status:"pending" tags:"book" uuid:"e56cad04-c966-496d-b39a-c5aa28e8981d"]

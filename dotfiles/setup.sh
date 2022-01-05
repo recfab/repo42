@@ -2,7 +2,7 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-this_dir=$(realpath $(dirname "$0"))
+this_dir=$(realpath "$(dirname "$0")")
 echo "Directory of setup script: $this_dir"
 
 softlink() {
