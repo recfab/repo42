@@ -1,8 +1,3 @@
----
-id: 20211216165244
-created: 2021-12-16T16:52:44-0800
-modified: 2021-12-16T16:52:44-0800
----
 # Pandas
 
 - Python library for data analysis
