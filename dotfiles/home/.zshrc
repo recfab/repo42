@@ -61,6 +61,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  asdf
   colored-man-pages
   docker
   # docker-compose
@@ -104,10 +105,8 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# source $(brew --prefix asdf)/asdf.sh
-
-# eval "$(asdf exec direnv hook zsh)"
-# direnv() { asdf exec direnv "$@"; }
+eval "$(asdf exec direnv hook zsh)"
+direnv() { asdf exec direnv "$@"; }
 
 # export JAVA_HOME=$(/usr/libexec/java_home)
 

@@ -1,6 +1,24 @@
-# Résumé
+# Yael Namen
 
 Yael Namen :dotnet: image:dotnet.png[.NET] :jquery: image:jquery.png[jQuery] :mssql: image:sqlserver.png[Microsoft SQL Server] :p4: image:p4.png[Perforce] :toc:
+
+## Technical Skills
+
+* Databases
+  * PostgreSQL
+  * MongoDB
+  * MSSQL
+  * Oracle 10
+  * MySQL
+* Languages
+  * C#
+  * F#
+  * Python
+  * Bash
+  * T-SQL
+  * PL/SQL
+* Frontend Frameworks
+  * Vue.js
 
 ## Work History
 
