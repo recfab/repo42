@@ -45,7 +45,7 @@ cspell:
     TF_HTTP_LOCK_METHOD: POST
     TF_HTTP_UNLOCK_METHOD: DELETE
   before_script:
-    - cd infra
+    - cd ops/infra
     - terraform init
 
 tf-validate:
