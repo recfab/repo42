@@ -1,5 +1,0 @@
-# GitFlow
-
-GitFlow is a branching model for git projects.
-The original article cite:[Driessen2010] described a branching model for traditional applications.
-It was not intended to apply to web-based software, though became quite popular in that realm anyway.

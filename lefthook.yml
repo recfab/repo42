@@ -10,4 +10,4 @@ pre-commit:
       glob: "*/*.sh"
       run: shellcheck {all_files}
     format-cspell-json:
-      run: jq -f scripts/fmt-cspell-json.jq cspell.json | sponge cspell.json; git add cspell.json
+      run: jq -f tools/fmt-cspell-json.jq cspell.json | sponge cspell.json; git add cspell.json

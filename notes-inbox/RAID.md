@@ -1,4 +1,0 @@
-- Risks
-- Assumptions
-- Issues
-- Dependencies

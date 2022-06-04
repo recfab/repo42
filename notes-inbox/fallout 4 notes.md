@@ -1,3 +1,0 @@
-## Institute
-
-courser = slave patrol

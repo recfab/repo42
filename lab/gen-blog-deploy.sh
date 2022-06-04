@@ -5,15 +5,15 @@ set -o nounset
 
 thisDir=$(dirname "$0")
 
-# shellcheck source=scripts/variable-helpers.sh
+# shellcheck source=lab/variable-helpers.sh
 . "$thisDir/variable-helpers.sh"
 
 if [ -z ${CI+x} ]; then
-    echo "💡 Because you are not running in a CI/CD pipeline, I presume that you are developing this script. I will set some variables for you to make that easier."
-    echo
+  echo "💡 Because you are not running in a CI/CD pipeline, I presume that you are developing this script. I will set some variables for you to make that easier."
+  echo
 
-    set_common_ci_vars
-    set_env_ci_vars
+  set_common_ci_vars
+  set_env_ci_vars
 fi
 
 print_project_ci_vars

@@ -1,6 +1,0 @@
-resources:
-  - deployment.yml
-  - service.yml
-
-commonAnnotations:
-  app.kubernetes.io/name: blog
