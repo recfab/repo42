@@ -154,6 +154,7 @@
     "dotfiles",
     "extensions.json",
     "package-lock.json",
+    "package.json",
     "target"
   ]
 }
