@@ -106,6 +106,8 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gs="git status"
 alias k="kubectl"
+alias tf="terraform"
+alias tfpo="terraform plan -out=plan.tfplan"
 
 eval "$(asdf exec direnv hook zsh)"
 direnv() { asdf exec direnv "$@"; }
@@ -120,6 +122,7 @@ export PATH="$GOPATH/bin:$PATH"
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/recfab/.zshrc'
