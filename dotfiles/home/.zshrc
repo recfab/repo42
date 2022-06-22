@@ -105,6 +105,8 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gs="git status"
+
+alias gpmr='git push --set-upstream origin $(git_current_branch) --push-option merge_request.create'
 alias k="kubectl"
 alias tf="terraform"
 alias tfpo="terraform plan -out=plan.tfplan"
