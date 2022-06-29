@@ -109,6 +109,7 @@ alias gs="git status"
 alias gpmr='git push --set-upstream origin $(git_current_branch) --push-option merge_request.create'
 alias k="kubectl"
 alias tf="terraform"
+alias tfval="terraform validate"
 alias tfpo="terraform plan -out=plan.tfplan"
 
 eval "$(asdf exec direnv hook zsh)"
