@@ -27,10 +27,16 @@ let pipeline =
 let parse text =
   MarkdownParser.Parse(text, pipeline, null)
 
-let notesRoot = "./notes"
-let journalRoot = notesRoot </> "journals"
+type Note =
+  | Journal of (DateTime * MarkdownDoc)
+  | Page of MarkdownDoc
 
-let journals = getMarkdownFiles journalRoot
+let notesRoot = "../commonplace-book"
+let importPath = notesRoot </> "vault/notes"
+let journalsPath = notesRoot </> "journals"
+let pagesPath = notesRoot </> "pages"
+
+let notes = getMarkdownFiles importPath
 
 let (|YMD|_|) input =
   let pattern =
@@ -40,23 +46,24 @@ let (|YMD|_|) input =
 
   if m.Success then
     [ for g in m.Groups -> g.Value ]
-    |> List.tail
-    |> fun [ y; m; d ] -> (y, m, d)
+    |> fun (_ :: y :: m :: d :: []) -> (y, m, d)
     |> Some
   else
     None
 
 let normalizeFileName p =
   match p with
-  | YMD (y, m, d) -> sprintf "%s_%s_%s.md" y m d |> Some
-  | _ -> None
+  | YMD (y, m, d) ->
+    sprintf "%s_%s_%s.md" y m d
+    |> fun x -> journalsPath </> x
+  | _ -> pagesPath </> p
 
 type NormalizationSpec =
   static member ``already normalized``(dt: DateTime) =
     let input =
       sprintf "%d_%d_%d.md" dt.Year dt.Month dt.Day
 
-    normalizeFileName input = Some input
+    normalizeFileName input = (journalsPath </> input)
 
   static member ``dendron formatted``(dt: DateTime) =
     let input =
@@ -65,11 +72,10 @@ type NormalizationSpec =
     let expected =
       sprintf "%d_%d_%d.md" dt.Year dt.Month dt.Day
 
-    normalizeFileName input = Some expected
+    normalizeFileName input = (journalsPath </> expected)
 
 Check.QuickAll<NormalizationSpec>()
 
-
-let normalized =
-  journals
+let renames =
+  notes
   |> List.map (fun x -> (x, normalizeFileName x))
