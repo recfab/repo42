@@ -15,9 +15,7 @@ type MarkdownDoc = MarkdownDoc of string
 let (</>) a b = Path.Join([| a; b |])
 
 let getMarkdownFiles dir =
-  Directory.GetFiles(dir, "*.md")
-  |> List.ofArray
-  |> List.map Path.GetFileName
+  Directory.GetFiles(dir, "*.md") |> List.ofArray
 
 let pipeline =
   MarkdownPipelineBuilder()
@@ -36,8 +34,6 @@ let importPath = notesRoot </> "vault/notes"
 let journalsPath = notesRoot </> "journals"
 let pagesPath = notesRoot </> "pages"
 
-let notes = getMarkdownFiles importPath
-
 let (|YMD|_|) input =
   let pattern =
     "(\d{1,4})[_.](\d{1,2})[_.](\d{1,2})\.md"
@@ -51,12 +47,14 @@ let (|YMD|_|) input =
   else
     None
 
-let normalizeFileName p =
-  match p with
+let normalizeFileName (path: string) =
+  let basename = Path.GetFileName path
+
+  match basename with
   | YMD (y, m, d) ->
     sprintf "%s_%s_%s.md" y m d
     |> fun x -> journalsPath </> x
-  | _ -> pagesPath </> p
+  | _ -> pagesPath </> basename
 
 type NormalizationSpec =
   static member ``already normalized``(dt: DateTime) =
@@ -76,6 +74,19 @@ type NormalizationSpec =
 
 Check.QuickAll<NormalizationSpec>()
 
+let mkdirp dirname =
+  if not <| Directory.Exists(dirname) then
+    Directory.CreateDirectory(dirname) |> ignore
+
+mkdirp journalsPath
+mkdirp pagesPath
+
+let notes = getMarkdownFiles importPath
+
 let renames =
   notes
   |> List.map (fun x -> (x, normalizeFileName x))
+
+for (src, dst) in renames do
+  printf "Moving %s --to--> %s" src dst
+  File.Move(src, dst)
