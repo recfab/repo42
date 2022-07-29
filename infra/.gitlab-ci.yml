@@ -1,0 +1,61 @@
+include:
+  - template: Terraform/Base.latest.gitlab-ci.yml
+
+workflow:
+  rules:
+    - if: $CI_MERGE_REQUEST_IID
+      variables:
+        ENV: $CI_COMMIT_REF_SLUG
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+      variables:
+        ENV: prod
+
+variables:
+  REGION: sfo3
+  STACK: default
+  TF_ROOT: ${CI_PROJECT_DIR}/stacks/${STACK}
+  TF_STATE_NAME: "${ENV}-${REGION}-${STACK}"
+  ENV_FULL: "${ENV}/${REGION}/${STACK}"
+
+  TF_VAR_environment: ${ENV}
+  TF_VAR_region: ${REGION}
+
+stages:
+  - init
+  - validate
+  - build
+  - deploy
+
+fmt:
+  extends: .terraform:fmt
+  needs: []
+
+validate:
+  extends: .terraform:validate
+  needs: []
+
+build:
+  extends: .terraform:build
+
+deploy:
+  extends: .terraform:deploy
+  dependencies:
+    - build
+  needs:
+    - job: build
+      artifacts: true
+  environment:
+    name: $ENV_FULL
+    on_stop: destroy
+  rules:
+    - if: $CI_MERGE_REQUEST_IID
+      when: on_success
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: manual
+
+destroy:
+  extends: .terraform:destroy
+  stage: deploy
+  environment:
+    name: $ENV_FULL
+    action: stop
