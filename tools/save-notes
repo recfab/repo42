@@ -4,7 +4,7 @@ IFS=$'\n\t'
 
 bin_dir=$(dirname "$0")
 
-pushd "$bin_dir/../pkm"
+pushd "$bin_dir/../notebook"
 git add .
 git commit -m "Save notes"
 popd

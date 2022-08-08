@@ -4,6 +4,12 @@
 # load extensions
 extensions = ["myst_nb"]
 
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.ipynb': 'myst-nb',
+    '.myst': 'myst-nb',
+}
+
 # specify project details
 master_doc = "index"
 project = "MyST-NB Quickstart"
@@ -13,6 +19,14 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "**.ipynb_checkpoints"]
 nitpicky = True
 
 # myst_nb default settings
+myst_enable_extensions = [
+    "amsmath",
+    "colon_fence",
+    "deflist",
+    "dollarmath",
+    "html_image",
+]
+myst_url_schemes = ("http", "https", "mailto")
 
 # Custom formats for reading notebook; suffix -> reader
 # nb_custom_formats = {}
