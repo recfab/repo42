@@ -1,6 +1,6 @@
 # Repository 42
 
-The answer to code, docs and everything.
+The answer to the infra, the apps and everything.
 
 ## Structure of repository
 
