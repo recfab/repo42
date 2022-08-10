@@ -14,7 +14,7 @@ TODO Bring repo into alignment with this structure
 - 📂 `dotfiles/` - my dotfiles
   - 📂 `bin/`
 - 📂 `infra/` - infrastructure as code
-- 📂 `notes/` - my notes, managed by [Dendron](https://wiki.dendron.so/).
+- 📂 `notebook/` - my notes, structured as a [MyST Notebook](https://myst-nb.readthedocs.io).
 - 📂 `tools/` - scripts for working with the repository itself
 - 📂 `lab/` - experiments
 - 📂 `src/` - application source code
