@@ -28,10 +28,7 @@ TODO Bring repo into alignment with this structure
 - TODO merge other repositories
   - infra
   - commonplace-book
-- DONE document repo structure
 - TODO document using .code-workspace files in this repo
-- DONE Convert this README to markdown
-- TODO Move ideas into Dendron
 
 ## Ideas for projects
 
