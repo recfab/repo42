@@ -1,3 +1,7 @@
 # Accelerate (2018)
 
-:authors: Nicole Forsgren, PhD, Jez Humble, and Gene Kim
+:::{admonition} Metadata
+
+:authors: [](../people/forsgren-nicole.md), [](../people/humble-jez.md), and [](../people/kim-gene.md)
+:subtitle: Building and scaling high performing technology organizations
+:::
