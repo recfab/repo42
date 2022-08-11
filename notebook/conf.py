@@ -18,6 +18,8 @@ project = "Commonplace Book"
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "**.ipynb_checkpoints"]
 nitpicky = True
 
+html_theme = "sphinx_book_theme"
+
 # myst_nb default settings
 myst_enable_extensions = [
     "colon_fence",
