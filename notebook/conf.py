@@ -12,7 +12,7 @@ source_suffix = {
 
 # specify project details
 master_doc = "index"
-project = "MyST-NB Quickstart"
+project = "Commonplace Book"
 
 # basic build settings
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "**.ipynb_checkpoints"]
@@ -20,11 +20,9 @@ nitpicky = True
 
 # myst_nb default settings
 myst_enable_extensions = [
-    "amsmath",
     "colon_fence",
     "deflist",
-    "dollarmath",
-    "html_image",
+    "fieldlist",
 ]
 myst_url_schemes = ("http", "https", "mailto")
 
