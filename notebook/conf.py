@@ -12,13 +12,14 @@ source_suffix = {
 
 # specify project details
 master_doc = "index"
-project = "Commonplace Book"
+project = "Yael Namen's Commonplace Book"
 
 # basic build settings
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "**.ipynb_checkpoints"]
 nitpicky = True
 
 html_theme = "sphinx_book_theme"
+html_title = project
 
 # myst_nb default settings
 myst_enable_extensions = [
