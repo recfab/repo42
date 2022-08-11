@@ -1,8 +1,7 @@
 services:
-  orientdb:
-    image: orientdb
+  notebook:
+    image: nginx
     ports:
-      - "2424:2424"
-      - "2480:2480"
-    environment:
-      ORIENTDB_ROOT_PASSWORD: root
+      - "8080:80"
+    volumes:
+      - "$PWD/.tmp/_build/html:/usr/share/nginx/html:ro"
