@@ -7,6 +7,6 @@ TODO links sometimes break when the target doc is in a folder
 
 notebook1
 notebook2
-reading-notes/index
+books/index
 people/index
 ```
