@@ -8,16 +8,15 @@
     "bierner.markdown-emoji",
     "bierner.markdown-mermaid",
     "bierner.markdown-preview-github-styles",
-    "bierner.markdown-yaml-preamble",
-    "DavidAnson.vscode-markdownlint",
-    "EditorConfig.EditorConfig",
+    "davidanson.vscode-markdownlint",
+    "editorconfig.editorconfig",
     "foxundermoon.shell-format",
-    "GitLab.gitlab-workflow",
+    "gitlab.gitlab-workflow",
     "hashicorp.terraform",
     "streetsidesoftware.code-spell-checker",
     "svsool.markdown-memo",
     "timonwong.shellcheck",
-    "yzhang.markdown-all-in-one",
+    "yzhang.markdown-all-in-one"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []
