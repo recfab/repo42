@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work Journals/2025 Work/2025 Work.md",
+                "file": "Work Journals/2025 Work/2025-06 Work/2025-06-02 Work.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025 Work"
+              "title": "2025-06-02 Work"
             }
           }
         ]
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work Journals/2025 Work/2025 Work.md",
+                "file": "Templates/Journals.Work.Year.tpl.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2025 Work"
+              "title": "Backlinks for Journals.Work.Year.tpl"
             }
           },
           {
@@ -123,12 +123,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work Journals/2025 Work/2025 Work.md",
+                "file": "Templates/Journals.Work.Year.tpl.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2025 Work"
+              "title": "Outgoing links from Journals.Work.Year.tpl"
             }
           },
           {
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work Journals/2025 Work/2025 Work.md",
+                "file": "Templates/Journals.Work.Year.tpl.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025 Work"
+              "title": "Outline of Journals.Work.Year.tpl"
             }
           },
           {
@@ -191,9 +191,27 @@
   },
   "active": "6181ccda8e0dbdfb",
   "lastOpenFiles": [
-    "README.md",
+    "Work Journals/2025 Work/2025-06 Work/2025-06-01 Work.md",
+    "Work Journals/2025 Work/2025-05 Work/2025-05-22 Work.md",
+    "Work Journals/2025 Work/2025-05 Work/2025-05-14 Work.md",
+    "Templates/Journals.Work.Day.tpl.md",
+    "Work Journals/2025 Work/2025-05 Work/2025-05 Work.md",
+    "Work Journals/2025 Work/2025-W23 Work.md",
+    "Work Journals/2025 Work/2025-05 Work",
+    "Work Journals/2025 Work/2025-Q2 Work.md",
+    "Templates/Journals.Work.Quarter.tpl.md",
+    "Templates/Journals.Work.Week.tpl.md",
+    "Work Journals/2025 Work/2025-06 Work/2025-06-02 Work.md",
+    "Work Journals/2025 Work/2025-06 Work/2025-06 Work.md",
+    "Work Journals/2024 Work/2024 Work.md",
+    "Templates/Journals.Work.Year.tpl.md",
+    "Templates/Journals.Work.Month.tpl.md",
+    "Work Journals/2025 Work/2025-06 Work",
+    "Work Journals/2025-06 Work/2025-06 Work.md",
+    "Work Journals/2025-06 Work",
     "Work Journals/2025 Work/2025 Work.md",
-    "Templates/Journals.Work.AnnualReview.tpl.md",
+    "Work Journals/2024 Work",
+    "README.md",
     "Templates",
     "Work Journals/2025 Work",
     "Work Journals/2025 Work.md",
