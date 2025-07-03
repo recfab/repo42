@@ -42,4 +42,8 @@
     "yml",
     "fsharp"
   ],
+  "debug.javascript.defaultRuntimeExecutable": {
+    "pwa-node": "/Users/yael/.local/share/mise/shims/node"
+  },
+  "python.defaultInterpreterPath": "/Users/yael/.local/share/mise/installs/python/3.10.0/bin/python"
 }
