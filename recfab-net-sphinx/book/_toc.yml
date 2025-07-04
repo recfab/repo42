@@ -17,11 +17,12 @@ chapters:
             sections:
               - file: journals/2025/05/31/index
                 sections:
-                  - glob: "journals/2025/05/31/*"
+                  - file: journals/2025/05/31/unique-filename-assumption
       - file: journals/2024/index
         sections:
           - file: journals/2024/06/index
             sections:
               - file: journals/2024/06/08/index
                 sections:
-                  - glob: "journals/2024/06/08/*"
+                  - file: journals/2024/06/08/ensure-markdown-frontmatter-exists
+                  - file: journals/2024/06/08/update-note-tags

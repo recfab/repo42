@@ -1,7 +1,7 @@
 ---
-title: "How to bulk add tags to markdown frontmatter with YQ"
 date: 2024-06-08T21:30:00-07:00
 ---
+# How to bulk add tags to markdown frontmatter with YQ
 
 I keep my notes in markdown format, with tags stored in frontmatter.
 Sometimes I need to apply a particular tag to all notes in a folder.
@@ -9,9 +9,9 @@ This post describes how to do that using [yq](https://mikefarah.gitbook.io/yq).
 
 <!-- truncate -->
 
-:::note
+:::{note}
 YQ may behave unexpectedly on markdown files that do not have any front matter defined.
-See [How to ensure front matter exists in Markdown files](/blog/2024/06/08-ensure-markdown-frontmatter-exists/index.md) for a description of the problem and how to solve it.
+See [How to ensure front matter exists in Markdown files](./ensure-markdown-frontmatter-exists.md) for a description of the problem and how to solve it.
 :::
 
 ## The `--front-matter` flag
@@ -45,7 +45,7 @@ tags: ['tag-a']
 I store tags in an array field in the front matter.
 You can use the ['unique' operator](https://mikefarah.gitbook.io/yq/operators/unique) to add a tag only when it's not already present in the array.
 
-:::warning
+:::{warning}
 I don't totally understand the different between an operator and a function in yq, but for our purposes, it means we need to pipe a transformation into the unique operator, rather than call it like a function.
 
 There is also `unique_by`, which is a function and is used for filtering an array of objects by one of the keys.
@@ -78,7 +78,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Ensuring the tag exists in multiple files
 
-:::warning
+:::{warning}
 This is not smart enough to handle hierarchical tags, as allowed in Obsidian.md.
 For example, if a note has the `parent/child` tag, and you set `TAG_NAME=parent`, the note will have both tags:
 

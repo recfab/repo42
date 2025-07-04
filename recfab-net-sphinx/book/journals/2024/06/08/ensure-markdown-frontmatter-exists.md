@@ -1,7 +1,8 @@
 ---
-title: How to ensure front matter exists in Markdown files
 date: 2024-06-08T20:47:00-07:00
 ---
+# How to ensure front matter exists in Markdown files
+
 YQ supports operating and transforming YAML front matter via the [--front-matter](https://mikefarah.gitbook.io/yq/usage/front-matter) flag.
 
 For example, when using a file that has front matter, yq can extract the YAML correctly:
