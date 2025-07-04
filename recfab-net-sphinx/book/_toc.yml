@@ -3,6 +3,8 @@
 
 format: jb-book
 root: intro
+defaults: # The defaults key will be applied to all chapters and sub-sections
+  titlesonly: True
 chapters:
   - file: markdown
   - file: notebooks
@@ -17,3 +19,9 @@ chapters:
                 sections:
                   - glob: "journals/2025/05/31/*"
       - file: journals/2024/index
+        sections:
+          - file: journals/2024/06/index
+            sections:
+              - file: journals/2024/06/08/index
+                sections:
+                  - glob: "journals/2024/06/08/*"

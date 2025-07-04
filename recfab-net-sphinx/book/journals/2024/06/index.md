@@ -1,4 +1,4 @@
-# 2024 Public Journal
+# June 2024
 
 ```{tableofcontents}
 ```

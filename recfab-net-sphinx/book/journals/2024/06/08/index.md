@@ -1,4 +1,4 @@
-# 2024 Public Journal
+# Saturday, June 8, 2024
 
 ```{tableofcontents}
 ```
