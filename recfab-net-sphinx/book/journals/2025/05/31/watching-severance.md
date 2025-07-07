@@ -3,7 +3,7 @@
 - "His face looks like a donut" about Dylan #ShitMyPartnerSays
 - "This whole show is a liminal space " #ShitMyPartnerSays
 - Welp. Burt's ~~dead~~retired. Irving is not happy.
-- Holy shit his wife isn't dead! His wife is Ms. Casey! 😱
+- Holy shit Mark's wife isn't dead! His wife is Ms. Casey! 😱
 - Seth Milchik is his full name.
 - Managers get last names and are not severed. Workers get first names and are.
 - Except Ms. Casey who has a last name and is severed and is "retiring". Her life has been 107 hours long.
