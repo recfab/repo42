@@ -1,0 +1,98 @@
+---
+title: "Prototype: Fallout hacking buddy"
+description: A tool to help solve the hacking minigames in Fallout
+tags: [fallout-hacking-buddy]
+blogpost: true
+---
+
+import FalloutHackingHelper from "./fhb-prototype.tsx";
+
+export const candidates = [
+  "pouring",
+  "running",
+  "missing",
+  "winding",
+  "lending",
+  "carries",
+  "version",
+  "showing",
+  "massive",
+  "reading",
+  "meeting",
+  "trinity",
+  "leaving",
+  "holding",
+  "sending",
+];
+
+_Fallout_ is one of my favorite game series.
+The hacking minigame isn't bad, but there is a lot of it, so it can get tedious.
+The purpose of this tool is to **simplify solving the minigame**.
+
+The "perfect" version of this tool would be the following:
+
+- When I come across a locked terminal in game, I snap a photo of the screen with my phone
+- That photo is automatically converted to a game board in the tool
+- When I make a guess in the game, I enter the "Likeness" reported by the game, into the tool
+- The tool would then analyze what we know so far, and automatically eliminate certain candidates
+
+The main thing I care about _right now_ is the logic to iteratively eliminate candidates.
+
+{/* truncate */}
+
+## How the minigame works
+
+The minigame itself is basically a version of _Mastermind_, so this will be familiar if you played that.
+_Wordle_ is also similar.
+
+The goal of the minigame is to find the correct **password** to unlock the terminal.
+
+You are given a list of possible passwords (all of the same length) and a set number of turns to find the correct one.
+On each turn, you choose a possible password and the game responds with how many of the letters are correct. (Some games respond with something like "1 / 7 correct", and others say "Likeness = 1", but the meaning is the same.)
+You use this information to eliminate candidates, and deduce the correct password.
+
+## Developing the prototype
+
+The goal right now is to get the basic structure of a component in place as well as start working on the puzzle solving logic.
+
+To simplify the prototyping phase, I provide inputs for the list of candidates as well as the correct password, and "reveal" the likeness, rather than rely on manual entry.
+
+Clicking "create board" creates a table with a row for each candidate password.
+Each row also has columns for "Likeness" and "Masks".
+
+The Likeness column starts as a button. In the final version, clicking the button would prompt the user to enter the likeness. In the prototype, since I have the correct answer, I can calculate the likeness on demand.
+
+If the guessed answer is the same as the correct answer, that row will be highlighted green.
+Otherwise, that answer will be crossed out and the "Masks" field will be filled in.
+
+Each mask has `$likeness` letters from the candidate filled in and underscores for the rest.
+For example, if the Candidate is `ABCD` and the likeness is 2, the masks will be:
+
+1. `AB__`
+1. `A_B_`
+1. `A__D`
+1. `_BC_`
+1. `_B_D`
+1. `__CD`
+
+To generate these masks, I start with an input array with a single, empty mask (meaning all underscores e.g. `____`).
+Then I loop through the input masks, then loop through the characters in the candidate, creating a new mask based on the input but with one more letter filled in.
+Then, using the current masks as the new input masks, I recurse until the resulting masks have `$likeness` letters.
+This approach is naive and can generate masks that have already been generated, so we only keep the new mask if letter at the current index wasn't already filled in and it wasn't added to the list already.
+
+I plan to use these "masks" to automatically eliminate other candidates. I will explore ideas for doing that in a future post.
+
+## The Prototype itself
+
+<FalloutHackingHelper
+  id="fallouthackinghelper"
+  initialCorrectPassword={candidates[4]}
+  initialCandidatesInput={candidates.join("\n")}
+/>
+
+## Reference
+
+The Fallout Fandom.com site has a [page](https://fallout.fandom.com/wiki/Hacking) about hacking.
+It has the following screenshot, which shows what the minigame looks like in-game and is where the default list of candidates in the prototype component come from.
+
+![](https://i.ytimg.com/vi/Bcp6VlZztCE/maxresdefault.jpg)

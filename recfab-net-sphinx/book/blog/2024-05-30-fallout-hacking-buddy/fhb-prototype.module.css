@@ -1,0 +1,21 @@
+.board {
+  border-radius: 1em;
+  border: 1px solid var(--ifm-color-primary);
+  padding: 1.5em;
+}
+.candidate {
+  &.eliminated {
+    & .value {
+      text-decoration: line-through;
+    }
+  }
+  &.correct {
+    background-color: greenyellow;
+    & .value {
+      font-weight: bolder;
+    }
+  }
+  &.active {
+    font-style: italic;
+  }
+}
