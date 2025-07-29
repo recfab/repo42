@@ -7,21 +7,22 @@ defaults: # The defaults key will be applied to all chapters and sub-sections
   titlesonly: True
 chapters:
   - file: markdown
-  - file: notebooks
+  # - file: notebooks
   - file: markdown-notebooks
-  - file: journals/index
-    sections:
-      - file: journals/2025/index
-        sections:
-          - file: journals/2025/05/index
-            sections:
-              - file: journals/2025/05/31/index
-                sections:
-                  - glob: "journals/2025/05/31/*"
-      - file: journals/2024/index
-        sections:
-          - file: journals/2024/06/index
-            sections:
-              - file: journals/2024/06/08/index
-                sections:
-                  - glob: "journals/2024/06/08/*"
+  # - file: journals/index
+  #   sections:
+  #     - file: journals/2025/index
+  #       sections:
+  #         - file: journals/2025/05/index
+  #           sections:
+  #             - file: journals/2025/05/31/index
+  #               sections:
+  #                 - glob: "journals/2025/05/31/*"
+  #     - file: journals/2024/index
+  #       sections:
+  #         - file: journals/2024/06/index
+  #           sections:
+  #             - file: journals/2024/06/08/index
+  #               sections:
+  #                 - glob: "journals/2024/06/08/*"
+  - file: blog/archive

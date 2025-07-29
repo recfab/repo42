@@ -995,6 +995,25 @@ wheels = [
 ]
 
 [[package]]
+name = "public-notebook"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "ablog" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "jupyter-book" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "ablog", specifier = ">=0.11.12" }]
+
+[package.metadata.requires-dev]
+dev = [{ name = "jupyter-book", specifier = ">=1.0.4.post1" }]
+
+[[package]]
 name = "pure-eval"
 version = "0.2.3"
 source = { registry = "https://pypi.org/simple" }
@@ -1200,25 +1219,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/63/87/ec956cbe98809270b59a22891d5758edae147a258e658bf3024a8254c855/pyzmq-27.0.0-pp311-pypy311_pp73-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:6ad0562d4e6abb785be3e4dd68599c41be821b521da38c402bc9ab2a8e7ebc7e", size = 747031, upload-time = "2025-06-13T14:08:48.419Z" },
     { url = "https://files.pythonhosted.org/packages/be/8a/4a3764a68abc02e2fbb0668d225b6fda5cd39586dd099cee8b2ed6ab0452/pyzmq-27.0.0-pp311-pypy311_pp73-win_amd64.whl", hash = "sha256:9df43a2459cd3a3563404c1456b2c4c69564daa7dbaf15724c09821a3329ce46", size = 544726, upload-time = "2025-06-13T14:08:49.903Z" },
 ]
-
-[[package]]
-name = "recfab-net-sphinx"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "ablog" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "jupyter-book" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "ablog", specifier = ">=0.11.12" }]
-
-[package.metadata.requires-dev]
-dev = [{ name = "jupyter-book", specifier = ">=1.0.4.post1" }]
 
 [[package]]
 name = "referencing"

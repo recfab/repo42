@@ -1,5 +1,5 @@
 [project]
-name = "recfab-net-sphinx"
+name = "public-notebook"
 version = "0.1.0"
 description = "My personal website"
 readme = "README.md"

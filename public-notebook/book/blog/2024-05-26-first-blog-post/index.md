@@ -1,9 +1,8 @@
 ---
-title: First Blog Post
-blogpost: true
-date: 2024-05-26
+title:
+date: May 26, 2024
 ---
-
+# First Blog Post
 I have been meaning to create a blog for a while, but I keep procrastinating--usually by overthinking which technology to use.
 
 <!-- truncate -->
