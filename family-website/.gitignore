@@ -1,4 +1,5 @@
 /inbox
+/.obsidian/workspace*.json
 
 # Dependencies
 /node_modules
