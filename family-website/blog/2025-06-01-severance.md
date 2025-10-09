@@ -1,5 +1,5 @@
 ---
-created_at: 2025-06-01T12:07:45-07:00
+created: 2025-06-01T12:07:45-07:00
 tags:
   - ShitMinoSays
   - Severance

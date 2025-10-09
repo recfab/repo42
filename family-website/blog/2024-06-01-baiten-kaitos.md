@@ -1,5 +1,5 @@
 ---
-created_at: 2024-06-01T17:25:43-07:00
+created: 2024-06-01T17:25:43-07:00
 tags:
   - ShitMinoSays
 ---

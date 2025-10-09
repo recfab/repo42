@@ -1,5 +1,5 @@
 ---
-created_at: 2024-08-02T19:54:45-07:00
+created: 2024-08-02T19:54:45-07:00
 tags:
   - ShitMinoSays
 aliases:

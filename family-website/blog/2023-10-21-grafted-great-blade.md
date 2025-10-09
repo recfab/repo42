@@ -1,11 +1,10 @@
 ---
-createdAt: 2025-07-15T19:24:38-07:00
+created: 2025-07-15T19:24:38-07:00
 day: "[[2023-10-21]]"
 extractedFrom: "[[2023-10-21 Elden ring]]"
 tags:
   - ShitMinoSays
   - EldenRing
-up: "[[Elden Ring]]"
 title: Grafted Great Blade
 aliases:
   - Tetanus Christmas Tree

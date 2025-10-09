@@ -1,5 +1,5 @@
 ---
-created_at: 2024-07-05T12:16:47-07:00
+created: 2024-07-05T12:16:47-07:00
 tags:
   - ShitMinoSays
   - SmilingFriends
