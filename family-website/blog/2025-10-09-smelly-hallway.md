@@ -8,5 +8,7 @@ tags:
 ---
 
 > **Mino:** "It smells like old chicken bones."
+> 
 > **Yael**: "It smells like an old chicken peed on the floor."
+> 
 > **Mino:** "Bkaw!"

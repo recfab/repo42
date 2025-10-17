@@ -6,6 +6,6 @@ title: Honey, take my picture!
 tags:
   - ShitMinoSays
 ---
-> Mino: "Would you take a picture of me making this face?"
+> **Mino:** "Would you take a picture of me making this face?"
 
-![[2025-10-08-take-my-picture.photo.jpeg]]
+![](2025-10-08-take-my-picture.photo.jpeg)

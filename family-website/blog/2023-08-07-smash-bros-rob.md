@@ -2,8 +2,8 @@
 created: 2025-07-14T23:17:46-07:00
 day: "[[2025-07-14]]"
 extractedFrom: "[[2023-08-07]]"
+title: Fighting ROB in Smash Bros.
 ---
-# ROB in Smash Bros.
 
 > **Mino:** "I have to fight an answering machine" 
 

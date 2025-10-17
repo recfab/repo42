@@ -8,5 +8,6 @@ tags:
   - ShitYaelSays
   - GoldenGirls
 ---
-> **Mino:** "Blanche is wearing UTI yellow. And Dorothy is wearing healthy urine yellow. " 
+> **Mino:** "Blanche is wearing UTI yellow. And Dorothy is wearing healthy urine yellow." 
+> 
 > **Yael:** "Is that why they're called the golden girls?"

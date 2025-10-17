@@ -41,6 +41,7 @@ const config: Config = {
       {
         docs: false,
         blog: {
+          blogSidebarCount: 30,
           routeBasePath: "/",
           showReadingTime: true,
           feedOptions: {

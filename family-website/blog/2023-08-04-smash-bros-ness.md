@@ -4,8 +4,8 @@ day: "[[2023-08-04]]"
 tags:
   - ShitMinoSays
   - SuperSmashBrosUltimate
+title: Fighting Ness in Smash Bros.
 ---
-# Ness in Smash Bros.
 
 > **Mino:** "Ness is a little bitch. I'm gonna put you in the hospital and make your family cry!"
 

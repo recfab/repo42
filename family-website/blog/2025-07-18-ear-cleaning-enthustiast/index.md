@@ -9,12 +9,14 @@ I said normal people probably look at someone who is excited about an ear cleani
 
 <!-- truncate --> 
 
-Me: "but your're my kind of crazy so it woks out."
-Me: "We can be crazy together!"
-Mino: "And have clean ass ears!"
+> **Yael:** "but your're my kind of crazy so it woks out."
+> 
+> **Yael:** "We can be crazy together!"
+> 
+> **Mino:** "And have clean ass ears!"
 
 Tbf it is a pretty cool kit.
 
-Mino: "I look like someone who likes to clean their ears and I don't know how to say that any other way."
+> **Mino:** "I look like someone who likes to clean their ears and I don't know how to say that any other way."
 
 ![](2025-07-18-ear-cleaning-enthustiast.jpg)

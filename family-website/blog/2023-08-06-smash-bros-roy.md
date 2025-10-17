@@ -2,8 +2,8 @@
 tags:
   - ShitMinoSays
   - SuperSmashBrosUltimate
+title: Fighting Roy in Smash Bros.
 ---
-# Roy in Smash Bros.
 
 > **Mino:** "He has a mighty sword as his symbol. You have an eggplant." 
 

@@ -7,6 +7,6 @@ title: Turkey Foot
 "My fingers look like bird toes. Caw caw." #ShitMinoSays 
 "This my turkey foot. "
 
-![[2025-10-08-caw-caw.jpg]]
+![](2025-10-08-caw-caw.jpg)
 
 "You see me come at someone like this you know I mean business. Like a dinosaur. Caw caw."

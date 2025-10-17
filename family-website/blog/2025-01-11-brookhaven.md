@@ -6,8 +6,8 @@ tags:
   - ShitMinoSays
   - Brookhaven
   - Roblox
+title: Watching Mino play "Brookhaven"
 ---
-# Watching Mino play Brookhaven
 
 - She dressed up as a cute little teddy bear in an aqua outfit 🧸👗
 - Then she broke into someone's house to rob her and set the house on fire

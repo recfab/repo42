@@ -5,10 +5,11 @@ extractedFrom: "[[2025-02-14]]"
 tags:
   - ShitMinoSays
   - Roblox
+title: Freeze Tag
 ---
-# Freeze tag
 
 Mino was talking about how she would win a game of freeze tag against children.
 
 > **Yael:** "You've been playing too much Roblox, talking about fighting kids"
+> 
 > **Mino:** "They get on my nerves!"

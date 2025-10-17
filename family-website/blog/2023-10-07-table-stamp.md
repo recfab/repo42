@@ -5,7 +5,8 @@ extractedFrom: "[[2023-10-07]]"
 tags:
   - ShitMinoSays
   - HouseFlipper
+title: Table with a tramp stamp
 ---
-# Table with a tramp stamp
+
 
 > **Mino:** "Why do you have a doodle on your table? Your table has a tramp stamp"

@@ -5,8 +5,8 @@ extractedFrom: "[[2023-06-03]]"
 tags:
   - ShitMinoSays
   - Weed
+title: Rough weed is better
 ---
-# Rough weed
 
 > **Mino:** "it's like you want the smoke to deep throat you"
 

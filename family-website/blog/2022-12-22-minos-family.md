@@ -4,8 +4,8 @@ day: "[[2022-12-22]]"
 extractedFrom: "[[2022-12-22]]"
 tags:
   - ShitMinoSays
+title: If there were a podcast about Mino's family
 ---
-# Mino's Family
 
 > **Mino:** "Y'all Don't Know" 
 
