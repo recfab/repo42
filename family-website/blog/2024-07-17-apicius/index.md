@@ -1,7 +1,7 @@
 ---
 created: 2024-07-17T18:20:20-07:00
+title: Apicius, wtf ever that is
 ---
-# Apicius, wtf ever that is
 
 > Mino: "He looks like he's the mascot for a brand of condoms that only works half the time." #ShitMinoSays 
 

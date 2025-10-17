@@ -2,8 +2,8 @@
 tags:
   - ShitMinoSays
   - SuperSmashBrosUltimate
+title: Playing Smash Bros.
 ---
-# Yoshi in Smash Bros.
 
 > **Mino:** "I could fit Yoshi's nose inside my mouth, if you think about it." 
 

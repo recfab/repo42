@@ -3,8 +3,8 @@ created: 2024-06-05T19:28:48-07:00
 tags:
   - ShitMinoSays
   - AbbottElementary
+title: Watching "Abbott Elementary"
 ---
-# Watching Abbott Elementary
 
 > **Mino:** "Jacob looks like Elijah Wood crossed with Michael Cera"
 

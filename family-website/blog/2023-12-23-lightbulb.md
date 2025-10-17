@@ -1,4 +1,6 @@
-# 💡
+---
+title: 💡
+---
 
 > **Mino:** "His head reminds me of a lightbulb"
 

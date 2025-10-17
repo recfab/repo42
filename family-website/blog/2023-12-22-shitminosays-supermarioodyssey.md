@@ -2,8 +2,8 @@
 tags:
   - SuperMarioOdyssey
   - ShitMinoSays
+title: Mino plays "Super Mario Odyssey"
 ---
-# Mino plays Super Mario Odyssey
 
 > **Mino:** "Mario, get your shit together, man"
 

@@ -2,8 +2,9 @@
 tags:
   - ShitMinoSays
   - SuperMarioOdyssey
+title: Mino plays "Super Mario Odyssey"
 ---
-# Shit Mino says about Super Mario Odyssey
+
 
 > **Mino:** Kisses are dangerous
 

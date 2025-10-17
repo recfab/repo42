@@ -3,6 +3,7 @@ created: 2024-08-19T21:34:09-07:00
 tags:
   - ShitMinoSays
   - SuperSmashBrosUltimate
+title: Mino plays "Super Mario Odyssey"
 ---
 # Super Mario Odyssey
 

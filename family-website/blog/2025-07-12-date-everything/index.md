@@ -4,7 +4,6 @@ day: "[[2025-07-12]]"
 tags:
   - ShitMinoSays
   - DateEverything
-game:
 title: Playing "Date Everything"
 ---
 

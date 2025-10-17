@@ -2,9 +2,10 @@
 tags:
   - ShitMinoSays
   - ThreeBodyProblem
+title: Watching "The Three Body Problem"
 ---
-# Shit Mino says about the Three Body Problem
+
+About all the boobs and butts in this show.
 
 > **Mino:** "More like the three titty problem"
 
-About all the boobs and butts in this show.
