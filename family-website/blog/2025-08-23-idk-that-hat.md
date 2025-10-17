@@ -8,5 +8,7 @@ tags:
   - ShitYaelSays
 ---
 > **Yael:** "I don't know who that hat is."
+> 
 > **Mino:** "that hat is so ugly it has its own personality."
+> 
 > **Mino:** "honey, how many clothes have you met? Gimme their number."
