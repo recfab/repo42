@@ -1,5 +1,5 @@
 def main():
-    print("Hello from public-docs-site!")
+    print("Hello from personal-docs-site!")
 
 
 if __name__ == "__main__":
