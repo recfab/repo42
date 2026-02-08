@@ -1,6 +1,0 @@
-{
-  "projects": {
-    "notes": "git@gitlab.com:recfab/commonplace-book.git",
-    "lab/safe-dojo": "git@gitlab.com:recfab/SAFE-Dojo.git"
-  }
-}
